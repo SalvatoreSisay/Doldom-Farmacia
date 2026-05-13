@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT">
+        <Label styleClass="icon-mdl,pin-icon" text="&#xE718;"/>
+        <Label styleClass="pinned-title" text="Tareas fijadas"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label styleClass="calendar-link" text="Ver calendario"/>
+    </HBox>
+    <HBox spacing="14.0" styleClass="task-card,urgent">
+        <Label styleClass="icon-mdl,task-icon,urgent-text" text="!"/>
+        <VBox spacing="2.0" HBox.hgrow="ALWAYS">
+            <Label styleClass="task-title" text="Revisar insulinas por vencer"/>
+            <Label styleClass="task-sub" text="4 lotes vencen dentro de 48 horas"/>
+        </VBox>
+        <Label styleClass="task-tag,urgent-text" text="URGENTE"/>
+    </HBox>
+    <HBox spacing="14.0" styleClass="task-card,stock">
+        <Label styleClass="icon-mdl,task-icon,stock-text" text="&#xE7BF;"/>
+        <VBox spacing="2.0" HBox.hgrow="ALWAYS">
+            <Label styleClass="task-title" text="Reabastecer amoxicilina"/>
+            <Label styleClass="task-sub" text="Stock bajo: estante B-12"/>
+        </VBox>
+        <Label styleClass="task-tag,stock-text" text="STOCK"/>
+    </HBox>
+    <HBox spacing="14.0" styleClass="task-card,client">
+        <Label styleClass="icon-mdl,task-icon,client-text" text="&#xE8D6;"/>
+        <VBox spacing="2.0" HBox.hgrow="ALWAYS">
+            <Label styleClass="task-title" text="Preparacion RX: Sra. Higgins"/>
+            <Label styleClass="task-sub" text="Listo para recoger a las 2:00 PM"/>
+        </VBox>
+        <Label styleClass="task-tag,client-text" text="CLIENTE"/>
+    </HBox>
+</VBox>

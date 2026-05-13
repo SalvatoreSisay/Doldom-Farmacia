@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="18.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT" spacing="22.0">
+        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="search-shell">
+            <Label styleClass="icon-mdl,top-icon" text="&#xE721;"/>
+            <TextField promptText="Buscar recetas, pacientes o inventario..." styleClass="search-field"/>
+        </HBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label styleClass="icon-mdl,top-icon-btn" text="&#xE7F4;"/>
+        <Label styleClass="icon-mdl,top-icon-btn" text="&#xE713;"/>
+        <Label styleClass="icon-mdl,top-icon-btn" text="&#xE897;"/>
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" fillHeight="false">
+        <VBox spacing="4.0">
+            <Label styleClass="welcome-title" text="Hola, Dra. Thorne"/>
+            <Label styleClass="welcome-sub" text="Tu farmacia esta lista para el turno de la manana."/>
+        </VBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <HBox alignment="CENTER_LEFT" spacing="8.0" styleClass="sync-badge">
+            <Pane styleClass="sync-dot"/>
+            <Label styleClass="sync-text" text="INVENTARIO EN VIVO"/>
+        </HBox>
+    </HBox>
+</VBox>

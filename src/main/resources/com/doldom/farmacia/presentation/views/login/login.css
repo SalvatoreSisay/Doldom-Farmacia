@@ -1,0 +1,221 @@
+.screen {
+    -fx-background-color: #feffd5;
+    -fx-font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.card {
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(56, 57, 45, 0.08), 30, 0.2, 0, 10);
+}
+
+.brand-panel {
+    -fx-background-color: linear-gradient(to bottom right, #1f6d39 0%, #2e8648 100%);
+    -fx-background-radius: 48 0 0 48;
+}
+
+.brand-art {
+    -fx-background-image: url("images/login-left-bg.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-radius: 48 0 0 48;
+}
+
+.brand-tint {
+    -fx-background-color: rgba(33, 115, 61, 0.52);
+    -fx-background-radius: 48 0 0 48;
+}
+
+.plus-box {
+    -fx-pref-width: 42;
+    -fx-pref-height: 42;
+    -fx-background-color: #95e7a5;
+    -fx-background-radius: 8;
+}
+
+.plus-mark {
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #21733d;
+    -fx-translate-y: -1;
+}
+
+.brand-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 56px;
+    -fx-font-weight: 800;
+    -fx-text-fill: white;
+}
+
+.brand-subtitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #a3f5b2;
+}
+
+.brand-quote {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 21px;
+    -fx-font-style: italic;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-line-spacing: 4;
+}
+
+.dot-line-main {
+    -fx-pref-width: 60;
+    -fx-pref-height: 5;
+    -fx-background-color: #a3f5b2;
+    -fx-background-radius: 999;
+}
+
+.dot-line-minor {
+    -fx-pref-width: 12;
+    -fx-pref-height: 5;
+    -fx-background-color: rgba(163, 245, 178, 0.35);
+    -fx-background-radius: 999;
+}
+
+.form-panel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0 48 48 0;
+}
+
+.heading {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #21733d;
+}
+
+.lead {
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #656558;
+    -fx-line-spacing: 4;
+}
+
+.field-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #38392d;
+}
+
+.forgot-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #21733d;
+}
+
+.field-shell {
+    -fx-padding: 0 20 0 20;
+    -fx-min-height: 72;
+    -fx-max-height: 72;
+    -fx-background-color: white;
+    -fx-background-radius: 28;
+    -fx-border-color: rgba(187, 186, 170, 0.45);
+    -fx-border-width: 1;
+    -fx-border-radius: 28;
+}
+
+.field-icon {
+    -fx-font-size: 18px;
+    -fx-text-fill: #828173;
+}
+
+.field-icon-mdl {
+    -fx-font-family: "Segoe MDL2 Assets";
+    -fx-font-size: 18px;
+    -fx-text-fill: #828173;
+}
+
+.field-input {
+    -fx-background-color: transparent;
+    -fx-text-fill: #38392d;
+    -fx-prompt-text-fill: rgba(101, 101, 88, 0.45);
+    -fx-font-size: 13px;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.icon-button {
+    -fx-font-family: "Segoe MDL2 Assets";
+    -fx-background-color: transparent;
+    -fx-text-fill: #828173;
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+}
+
+.remember-check {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #656558;
+}
+
+.remember-check .box {
+    -fx-background-color: white;
+    -fx-border-color: rgba(130, 129, 115, 0.7);
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
+    -fx-pref-width: 22;
+    -fx-pref-height: 22;
+}
+
+.remember-check:selected .mark {
+    -fx-background-color: #21733d;
+}
+
+.login-button {
+    -fx-min-height: 84;
+    -fx-background-color: linear-gradient(to right, #21733d 0%, #8be8a0 100%);
+    -fx-background-radius: 28;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+    -fx-effect: dropshadow(gaussian, rgba(33, 115, 61, 0.25), 20, 0.2, 0, 8);
+}
+
+.foot-text {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #656558;
+}
+
+.foot-link {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #21733d;
+}
+
+.foot-icon-mdl {
+    -fx-font-family: "Segoe MDL2 Assets";
+    -fx-font-size: 20px;
+    -fx-text-fill: #828173;
+}
+
+.cloud-badge {
+    -fx-padding: 10 18 10 16;
+    -fx-background-color: rgba(235, 233, 216, 0.75);
+    -fx-background-radius: 999;
+}
+
+.status-dot {
+    -fx-pref-width: 10;
+    -fx-pref-height: 10;
+    -fx-background-color: #95e7a5;
+    -fx-background-radius: 999;
+}
+
+.cloud-text {
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #656558;
+}
+
+.system-version {
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-text-fill: rgba(101, 101, 88, 0.55);
+}

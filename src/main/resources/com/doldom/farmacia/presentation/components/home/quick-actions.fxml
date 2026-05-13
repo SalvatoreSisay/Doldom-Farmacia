@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox spacing="10.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox spacing="18.0" styleClass="quick-card" HBox.hgrow="ALWAYS">
+        <StackPane styleClass="quick-icon,green">
+            <Label styleClass="icon-mdl,quick-icon-text" text="&#xE8C8;"/>
+        </StackPane>
+        <VBox spacing="8.0">
+            <Label maxWidth="160.0" styleClass="quick-title,green-text" text="Nueva venta" wrapText="true"/>
+            <Label styleClass="quick-desc" text="Procesa cobros rapidos&#10;de mostrador"/>
+        </VBox>
+    </VBox>
+    <VBox spacing="18.0" styleClass="quick-card" HBox.hgrow="ALWAYS">
+        <StackPane styleClass="quick-icon,orange">
+            <Label styleClass="icon-mdl,quick-icon-text,orange-text" text="&#xE7BF;"/>
+        </StackPane>
+        <VBox spacing="8.0">
+            <Label maxWidth="160.0" styleClass="quick-title,orange-text" text="Registrar compra" wrapText="true"/>
+            <Label styleClass="quick-desc" text="Ingreso de stock de&#10;proveedores"/>
+        </VBox>
+    </VBox>
+    <VBox spacing="18.0" styleClass="quick-card" HBox.hgrow="ALWAYS">
+        <StackPane styleClass="quick-icon,mint">
+            <Label styleClass="icon-mdl,quick-icon-text,mint-text" text="&#xE8D1;"/>
+        </StackPane>
+        <VBox spacing="8.0">
+            <Label maxWidth="160.0" styleClass="quick-title,mint-text" text="Revisar inventario" wrapText="true"/>
+            <Label styleClass="quick-desc" text="Niveles y alertas&#10;de vencimiento"/>
+        </VBox>
+    </VBox>
+</HBox>

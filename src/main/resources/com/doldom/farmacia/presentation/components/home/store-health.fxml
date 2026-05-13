@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="22.0" styleClass="health-card" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <Label styleClass="health-title" text="Estado de tienda"/>
+    <HBox>
+        <HBox alignment="CENTER_LEFT" spacing="8.0" HBox.hgrow="ALWAYS">
+            <Pane styleClass="mini-dot,green-dot"/>
+            <Label styleClass="health-label" text="Frescura de inventario"/>
+        </HBox>
+        <Label styleClass="health-value" text="94%"/>
+    </HBox>
+    <ProgressBar progress="0.94" styleClass="progress-green"/>
+    <HBox>
+        <HBox alignment="CENTER_LEFT" spacing="8.0" HBox.hgrow="ALWAYS">
+            <Pane styleClass="mini-dot,orange-dot"/>
+            <Label styleClass="health-label" text="Precision en recetas"/>
+        </HBox>
+        <Label styleClass="health-value" text="100%"/>
+    </HBox>
+    <ProgressBar progress="1.0" styleClass="progress-orange"/>
+    <Region styleClass="separator"/>
+    <HBox spacing="12.0" styleClass="tip-card">
+        <Label styleClass="icon-mdl,tip-icon" text="&#xE945;"/>
+        <VBox spacing="6.0">
+            <Label styleClass="tip-title" text="Tip farmaceutico:"/>
+            <Label styleClass="tip-text"
+                   text="Las auditorias de inventario son cada viernes. Manten estantes ordenados para reducir tiempos de transicion."
+                   wrapText="true"/>
+        </VBox>
+    </HBox>
+</VBox>

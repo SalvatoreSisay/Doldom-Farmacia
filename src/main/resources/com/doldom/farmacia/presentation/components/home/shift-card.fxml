@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="24.0" styleClass="shift-card" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox>
+        <Label styleClass="shift-title" text="Turno actual"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label styleClass="active-pill" text="ACTIVO"/>
+    </HBox>
+    <HBox>
+        <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+            <Label styleClass="shift-label" text="TIEMPO REGISTRADO"/>
+            <Label styleClass="shift-value" text="05h 24m"/>
+        </VBox>
+        <Label styleClass="icon-mdl,shift-icon" text="&#xE823;"/>
+    </HBox>
+    <HBox>
+        <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+            <Label styleClass="shift-label" text="VENTAS TOTALES"/>
+            <Label styleClass="shift-value" text="Q2,481.51"/>
+        </VBox>
+        <Label text="&#xEAFD;">
+            <styleClass>
+                <String fx:value="icon-mdl"/>
+                <String fx:value="shift-icon"/>
+            </styleClass>
+        </Label>
+    </HBox>
+    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="end-shift-button" text="Cerrar turno"/>
+</VBox>

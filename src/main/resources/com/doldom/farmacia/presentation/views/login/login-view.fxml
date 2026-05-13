@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" styleClass="screen" stylesheets="@login.css"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.doldom.farmacia.presentation.views.login.LoginController">
+    <HBox fx:id="cardContainer" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="112.0"
+          AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="72.0" styleClass="card">
+        <StackPane prefWidth="688.0" styleClass="brand-panel">
+            <Pane styleClass="brand-art"/>
+            <Pane styleClass="brand-tint"/>
+            <VBox spacing="10.0" StackPane.alignment="TOP_LEFT">
+                <padding>
+                    <Insets left="58.0" top="58.0"/>
+                </padding>
+                <HBox alignment="CENTER_LEFT" spacing="16.0">
+                    <StackPane styleClass="plus-box">
+                        <Label styleClass="plus-mark" text="+"/>
+                    </StackPane>
+                    <Label styleClass="brand-title" text="DOLDOM"/>
+                </HBox>
+                <Label styleClass="brand-subtitle" text="Farmacia"/>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" spacing="30.0" StackPane.alignment="BOTTOM_LEFT">
+                <padding>
+                    <Insets bottom="58.0" left="58.0"/>
+                </padding>
+                <Label maxWidth="545.0" styleClass="brand-quote"
+                       text="&quot;Restaurando el equilibrio entre&#10;la medicina moderna y el cuidado humano.&quot;"
+                       wrapText="true"/>
+                <HBox spacing="10.0">
+                    <Region styleClass="dot-line-main"/>
+                    <Region styleClass="dot-line-minor"/>
+                    <Region styleClass="dot-line-minor"/>
+                </HBox>
+            </VBox>
+        </StackPane>
+
+        <VBox prefWidth="688.0" styleClass="form-panel">
+            <padding>
+                <Insets bottom="58.0" left="80.0" right="80.0" top="82.0"/>
+            </padding>
+            <VBox spacing="12.0">
+                <Label maxWidth="520.0" styleClass="heading" text="Bienvenido de nuevo" wrapText="true"/>
+                <Label styleClass="lead"
+                       text="Ingresa tus credenciales para acceder al panel de tu farmacia."
+                       wrapText="true"/>
+            </VBox>
+            <VBox spacing="28.0" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets top="58.0"/>
+                </padding>
+                <VBox spacing="10.0">
+                    <Label styleClass="field-label" text="Usuario"/>
+                    <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="field-shell">
+                        <Label styleClass="field-icon-mdl" text="&#xE77B;"/>
+                        <TextField fx:id="userField" promptText="farmaceutico_usuario"
+                                   styleClass="field-input"/>
+                    </HBox>
+                </VBox>
+                <VBox spacing="10.0">
+                    <HBox alignment="CENTER_LEFT">
+                        <Label styleClass="field-label" text="Contraseña"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label styleClass="forgot-label" text="¿Olvidaste tu contraseña?"/>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="field-shell">
+                        <Label styleClass="field-icon-mdl" text="&#xE72E;"/>
+                        <StackPane HBox.hgrow="ALWAYS">
+                            <PasswordField fx:id="passwordField" onAction="#onLogin"
+                                           promptText="••••••••" styleClass="field-input"/>
+                            <TextField fx:id="passwordVisibleField" onAction="#onLogin"
+                                       promptText="••••••••" styleClass="field-input"/>
+                        </StackPane>
+                        <Button mnemonicParsing="false" onAction="#onTogglePassword"
+                                styleClass="icon-button" text="&#xE890;"/>
+                    </HBox>
+                </VBox>
+                <CheckBox mnemonicParsing="false" styleClass="remember-check"
+                          text="Recordar este equipo por 30 días"/>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLogin"
+                        styleClass="login-button" text="Iniciar sesión  →"/>
+            </VBox>
+            <VBox alignment="CENTER" spacing="36.0">
+                <padding>
+                    <Insets top="28.0"/>
+                </padding>
+                <HBox alignment="CENTER" spacing="8.0">
+                    <Label styleClass="foot-text" text="¿Nuevo en DOLDOM?"/>
+                    <Label styleClass="foot-link" text="Solicitar implementación"/>
+                </HBox>
+                <HBox alignment="CENTER" spacing="30.0">
+                    <Label styleClass="foot-icon-mdl" text="&#xE897;"/>
+                    <Label styleClass="foot-icon-mdl" text="&#xE774;"/>
+                    <Label styleClass="foot-icon-mdl" text="&#xE72E;"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </HBox>
+
+    <Label styleClass="system-version" text="SISTEMA V2.4.1 // SEGURO" AnchorPane.bottomAnchor="32.0"
+           AnchorPane.leftAnchor="40.0"/>
+</AnchorPane>

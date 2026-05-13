@@ -9,7 +9,7 @@ plugins {
     id("org.beryx.jlink") version "2.25.0"
 }
 
-group = "com.resdev.doldom"
+group = "com.doldom.farmacia"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -25,8 +25,8 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 application {
-    mainModule.set("com.resdev.doldom.doldomfarmacia")
-    mainClass.set("com.resdev.doldom.doldomfarmacia.HelloApplication")
+    mainModule.set("com.doldom.farmacia")
+    mainClass.set("com.doldom.farmacia.LauncherKt")
 }
 kotlin {
     jvmToolchain(26)

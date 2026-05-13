@@ -1,0 +1,390 @@
+.home-screen {
+    -fx-background-color: #feffd5;
+    -fx-font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.sidebar {
+    -fx-background-color: #fcfaed;
+}
+
+.brand-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #21733d;
+}
+
+.brand-subtitle {
+    -fx-font-size: 8px;
+    -fx-text-fill: #656558;
+    -fx-letter-spacing: 1.2px;
+}
+
+.icon-mdl {
+    -fx-font-family: "Segoe MDL2 Assets";
+}
+
+.nav-item,
+.nav-item-active {
+    -fx-alignment: center-left;
+    -fx-padding: 10 12 10 12;
+    -fx-background-radius: 14;
+}
+
+.nav-item-active {
+    -fx-background-color: #d9d6c8;
+}
+
+.nav-item:hover {
+    -fx-background-color: #ebe9d8;
+}
+
+.nav-icon,
+.nav-label {
+    -fx-text-fill: #656558;
+}
+
+.nav-icon,
+.nav-icon-active {
+    -fx-font-size: 16px;
+}
+
+.nav-label,
+.nav-label-active {
+    -fx-font-size: 15px;
+}
+
+.nav-icon-active,
+.nav-label-active {
+    -fx-text-fill: #21733d;
+    -fx-font-weight: 700;
+}
+
+.new-rx-button {
+    -fx-min-height: 42;
+    -fx-background-radius: 16;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to right, #21733d 0%, #8be8a0 100%);
+}
+
+.avatar {
+    -fx-min-width: 52;
+    -fx-min-height: 52;
+    -fx-max-width: 52;
+    -fx-max-height: 52;
+    -fx-background-color: #d6ecdd;
+    -fx-background-radius: 999;
+}
+
+.avatar-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #21733d;
+}
+
+.profile-name {
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #38392d;
+}
+
+.profile-role {
+    -fx-font-size: 9px;
+    -fx-text-fill: #656558;
+}
+
+.search-shell {
+    -fx-min-height: 46;
+    -fx-max-width: 520;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 16;
+    -fx-padding: 0 16 0 16;
+}
+
+.top-icon {
+    -fx-font-size: 18px;
+    -fx-text-fill: #656558;
+}
+
+.search-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-size: 12px;
+}
+
+.top-icon-btn {
+    -fx-font-size: 18px;
+    -fx-text-fill: #656558;
+}
+
+.welcome-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 38px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #21733d;
+}
+
+.welcome-sub {
+    -fx-font-size: 14px;
+    -fx-text-fill: #656558;
+}
+
+.sync-badge {
+    -fx-padding: 4 14 4 14;
+    -fx-min-height: 32;
+    -fx-pref-height: 32;
+    -fx-max-height: 32;
+    -fx-background-color: #e8e6d8;
+    -fx-background-radius: 999;
+    -fx-border-color: #d2cfbf;
+    -fx-border-width: 1;
+    -fx-border-radius: 999;
+}
+
+.sync-dot {
+    -fx-min-width: 9;
+    -fx-min-height: 9;
+    -fx-max-width: 9;
+    -fx-max-height: 9;
+    -fx-background-color: #7eaf86;
+    -fx-background-radius: 999;
+}
+
+.sync-text {
+    -fx-font-size: 7.5px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #656558;
+}
+
+.quick-card {
+    -fx-background-color: #f4f4f6;
+    -fx-background-radius: 18;
+    -fx-padding: 22;
+    -fx-pref-width: 250;
+    -fx-min-height: 185;
+    -fx-pref-height: 185;
+    -fx-max-height: 185;
+}
+
+.quick-icon {
+    -fx-min-width: 48;
+    -fx-min-height: 48;
+    -fx-max-width: 48;
+    -fx-max-height: 48;
+    -fx-background-radius: 16;
+}
+
+.quick-icon.green { -fx-background-color: #9eeab0; }
+.quick-icon.orange { -fx-background-color: #f3ceb7; }
+.quick-icon.mint { -fx-background-color: #bdeccd; }
+
+.quick-icon-text {
+    -fx-font-size: 20px;
+    -fx-text-fill: #0e6632;
+}
+
+.quick-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.quick-desc {
+    -fx-font-size: 11px;
+    -fx-text-fill: #656558;
+    -fx-line-spacing: 2;
+}
+
+.green-text { -fx-text-fill: #0e6632; }
+.orange-text { -fx-text-fill: #a95400; }
+.mint-text { -fx-text-fill: #2b6042; }
+
+.shift-card {
+    -fx-background-color: #dddbc9;
+    -fx-background-radius: 18;
+    -fx-padding: 24;
+    -fx-pref-width: 335;
+}
+
+.shift-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 21px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #21733d;
+}
+
+.active-pill {
+    -fx-background-color: #16743a;
+    -fx-background-radius: 999;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-padding: 5 12 5 12;
+}
+
+.shift-label {
+    -fx-font-size: 10px;
+    -fx-text-fill: #656558;
+}
+
+.shift-value {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 34px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #282a22;
+}
+
+.shift-icon {
+    -fx-font-size: 30px;
+    -fx-text-fill: #95bfa0;
+}
+
+.end-shift-button {
+    -fx-min-height: 44;
+    -fx-background-color: #f4f4f6;
+    -fx-border-color: #aead99;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 11px;
+}
+
+.pin-icon {
+    -fx-font-size: 20px;
+    -fx-text-fill: #21733d;
+}
+
+.pinned-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #21733d;
+}
+
+.calendar-link {
+    -fx-font-size: 10px;
+    -fx-text-fill: #0d6a33;
+}
+
+.task-card {
+    -fx-background-color: #f4f4f6;
+    -fx-background-radius: 16;
+    -fx-padding: 12 16 12 16;
+    -fx-alignment: center-left;
+}
+
+.task-card.urgent { -fx-border-color: transparent transparent transparent #b03c23; -fx-border-width: 0 0 0 4; }
+.task-card.stock { -fx-border-color: transparent transparent transparent #a95400; -fx-border-width: 0 0 0 4; }
+.task-card.client { -fx-border-color: transparent transparent transparent #16743a; -fx-border-width: 0 0 0 4; }
+
+.task-icon {
+    -fx-font-size: 18px;
+}
+
+.task-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2f3028;
+}
+
+.task-sub {
+    -fx-font-size: 10px;
+    -fx-text-fill: #656558;
+}
+
+.task-tag {
+    -fx-font-size: 9px;
+    -fx-font-weight: 700;
+}
+
+.urgent-text { -fx-text-fill: #b03c23; }
+.stock-text { -fx-text-fill: #a95400; }
+.client-text { -fx-text-fill: #16743a; }
+
+.health-card {
+    -fx-pref-width: 370;
+    -fx-background-color: #e8e6d8;
+    -fx-background-radius: 16;
+    -fx-padding: 24;
+}
+
+.health-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0e6632;
+}
+
+.mini-dot {
+    -fx-min-width: 10;
+    -fx-min-height: 10;
+    -fx-max-width: 10;
+    -fx-max-height: 10;
+    -fx-background-radius: 999;
+}
+
+.green-dot { -fx-background-color: #95e7a5; }
+.orange-dot { -fx-background-color: #f3ceb7; }
+
+.health-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #656558;
+}
+
+.health-value {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #202219;
+}
+
+.progress-green,
+.progress-orange {
+    -fx-pref-height: 6;
+}
+
+.progress-green .track,
+.progress-orange .track {
+    -fx-background-color: #ece9db;
+    -fx-background-radius: 999;
+}
+
+.progress-green .bar {
+    -fx-background-color: #1f8d45;
+    -fx-background-radius: 999;
+}
+
+.progress-orange .bar {
+    -fx-background-color: #a95400;
+    -fx-background-radius: 999;
+}
+
+.separator {
+    -fx-min-height: 1;
+    -fx-background-color: #d4d2c3;
+}
+
+.tip-card {
+    -fx-background-color: #d0e9cd;
+    -fx-background-radius: 16;
+    -fx-padding: 14;
+}
+
+.tip-icon {
+    -fx-font-size: 16px;
+    -fx-text-fill: #0e6632;
+}
+
+.tip-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0e6632;
+}
+
+.tip-text {
+    -fx-font-size: 9px;
+    -fx-text-fill: #0e6632;
+    -fx-line-spacing: 4;
+}

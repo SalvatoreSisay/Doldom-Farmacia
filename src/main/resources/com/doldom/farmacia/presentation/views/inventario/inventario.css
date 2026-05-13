@@ -1,0 +1,399 @@
+@import url("../home/home.css");
+
+.inventory-search-shell {
+    -fx-max-width: 720;
+}
+
+.inventory-v-sep {
+    -fx-min-width: 1;
+    -fx-pref-width: 1;
+    -fx-max-width: 1;
+    -fx-min-height: 28;
+    -fx-background-color: #d4d2c3;
+}
+
+.inventory-branch-name {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #38392d;
+}
+
+.inventory-branch-sub {
+    -fx-font-size: 10px;
+    -fx-text-fill: #656558;
+}
+
+.inventory-branch-icon-shell {
+    -fx-min-width: 38;
+    -fx-min-height: 38;
+    -fx-background-color: #a3f5b2;
+    -fx-background-radius: 12;
+}
+
+.inventory-branch-icon {
+    -fx-font-size: 16px;
+    -fx-text-fill: #005f2c;
+}
+
+.inventory-main-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 56px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.inventory-main-sub {
+    -fx-font-size: 16px;
+    -fx-text-fill: #656558;
+    -fx-line-spacing: 4;
+}
+
+.inventory-action-muted,
+.inventory-action-primary {
+    -fx-pref-width: 170;
+    -fx-min-height: 100;
+    -fx-background-radius: 18;
+    -fx-padding: 14;
+}
+
+.inventory-action-muted {
+    -fx-background-color: #dddbc9;
+}
+
+.inventory-action-primary {
+    -fx-background-color: linear-gradient(to right, #21733d 0%, #8be8a0 100%);
+}
+
+.inventory-action-icon,
+.inventory-action-plus {
+    -fx-font-size: 20px;
+}
+
+.inventory-action-icon {
+    -fx-text-fill: #656558;
+}
+
+.inventory-action-plus {
+    -fx-text-fill: white;
+}
+
+.inventory-action-muted-text {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #4a4b40;
+    -fx-alignment: center-left;
+}
+
+.inventory-action-primary-text {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+}
+
+.inventory-health-card {
+    -fx-background-color: #f4f4f6;
+    -fx-background-radius: 28;
+    -fx-padding: 24;
+    -fx-pref-width: 560;
+}
+
+.inventory-health-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #4f5045;
+}
+
+.inventory-health-value {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 72px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #16743a;
+}
+
+.inventory-health-delta {
+    -fx-font-size: 32px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2c6f48;
+}
+
+.inventory-health-bar-main,
+.inventory-health-bar-secondary,
+.inventory-health-bar-track {
+    -fx-min-height: 10;
+    -fx-background-radius: 999;
+}
+
+.inventory-health-bar-main { -fx-pref-width: 380; -fx-background-color: #1f8d45; }
+.inventory-health-bar-secondary { -fx-pref-width: 130; -fx-background-color: #a7dfb6; }
+.inventory-health-bar-track { -fx-pref-width: 24; -fx-background-color: #e3dfd0; }
+
+.inventory-lowstock-card,
+.inventory-expiry-card {
+    -fx-pref-width: 280;
+    -fx-background-radius: 28;
+    -fx-padding: 22;
+}
+
+.inventory-lowstock-card { -fx-background-color: #f3ceb7; }
+.inventory-expiry-card { -fx-background-color: #dddbc9; }
+
+.inventory-lowstock-icon,
+.inventory-expiry-icon {
+    -fx-font-size: 28px;
+}
+
+.inventory-lowstock-icon { -fx-text-fill: #814000; }
+.inventory-expiry-icon { -fx-text-fill: #16743a; }
+
+.inventory-lowstock-value,
+.inventory-expiry-value {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 62px;
+    -fx-font-weight: 800;
+}
+
+.inventory-lowstock-value { -fx-text-fill: #814000; }
+.inventory-expiry-value { -fx-text-fill: #323327; }
+
+.inventory-lowstock-label,
+.inventory-expiry-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-letter-spacing: 1;
+}
+
+.inventory-lowstock-label { -fx-text-fill: #814000; }
+.inventory-expiry-label { -fx-text-fill: #5a5a4f; }
+
+.inventory-table-card {
+    -fx-background-color: #f4f4f6;
+    -fx-background-radius: 34;
+    -fx-border-color: #dbd8c9;
+    -fx-border-radius: 34;
+    -fx-border-width: 1;
+}
+
+.inventory-table-top,
+.inventory-pagination {
+    -fx-padding: 18 24 18 24;
+}
+
+.inventory-table-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+}
+
+.inventory-table-chip {
+    -fx-background-color: #a7dfb6;
+    -fx-background-radius: 999;
+    -fx-padding: 6 12 6 12;
+    -fx-font-size: 10px;
+    -fx-text-fill: #2f513b;
+}
+
+.inventory-sort-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #656558;
+}
+
+.inventory-sort-value {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0e6632;
+}
+
+.inventory-table-head {
+    -fx-background-color: #ebe9d8;
+    -fx-padding: 12 22 12 22;
+}
+
+.inventory-col {
+    -fx-font-size: 12px;
+    -fx-text-fill: #38392d;
+}
+
+.inventory-col.header {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-letter-spacing: 1;
+    -fx-text-fill: #5e5f52;
+}
+
+.col-name { -fx-pref-width: 360; }
+.col-cat { -fx-pref-width: 220; }
+.col-stock { -fx-pref-width: 280; }
+.col-price { -fx-pref-width: 180; }
+.col-exp { -fx-pref-width: 180; }
+
+.inventory-row {
+    -fx-padding: 10 22 10 22;
+    -fx-background-color: #f4f4f6;
+}
+
+.inventory-row-warn {
+    -fx-background-color: #ece7e4;
+}
+
+.inventory-prod-icon-shell {
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-color: #dddbc9;
+    -fx-background-radius: 14;
+}
+
+.inventory-prod-icon-shell.warn {
+    -fx-background-color: #ffffff;
+}
+
+.inventory-prod-icon {
+    -fx-font-size: 24px;
+    -fx-text-fill: #16743a;
+}
+
+.inventory-prod-icon.warn {
+    -fx-text-fill: #a95400;
+}
+
+.inventory-prod-name {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+}
+
+.inventory-prod-sku {
+    -fx-font-size: 11px;
+    -fx-text-fill: #656558;
+}
+
+.inventory-cat-chip {
+    -fx-background-color: #a7dfb6;
+    -fx-background-radius: 999;
+    -fx-padding: 6 14 6 14;
+    -fx-font-size: 11px;
+    -fx-text-fill: #2f513b;
+}
+
+.inventory-cat-chip.neutral {
+    -fx-background-color: #dddbc9;
+    -fx-text-fill: #5c5c4f;
+}
+
+.inventory-stock-value {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+}
+
+.inventory-stock-value.warn {
+    -fx-text-fill: #a95400;
+}
+
+.inventory-stock-progress {
+    -fx-pref-width: 80;
+    -fx-pref-height: 8;
+}
+
+.inventory-stock-progress .track {
+    -fx-background-color: #e3dfd0;
+    -fx-background-radius: 999;
+}
+
+.inventory-stock-progress .bar {
+    -fx-background-color: #1f8d45;
+    -fx-background-radius: 999;
+}
+
+.inventory-stock-progress.warn .bar {
+    -fx-background-color: #a95400;
+}
+
+.inventory-price {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+}
+
+.inventory-exp-date {
+    -fx-font-size: 18px;
+    -fx-text-fill: #5f6055;
+}
+
+.inventory-pagination {
+    -fx-background-color: #efede0;
+    -fx-background-radius: 0 0 34 34;
+}
+
+.inventory-pagination-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #656558;
+}
+
+.inventory-page-btn {
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-text-fill: #4f5045;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+
+.inventory-page-btn.active {
+    -fx-background-color: #16743a;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+}
+
+.inventory-flow-panel {
+    -fx-pref-width: 380;
+    -fx-padding: 18;
+    -fx-background-color: rgba(255, 255, 255, 0.84);
+    -fx-background-radius: 36;
+    -fx-border-color: rgba(255, 255, 255, 0.92);
+    -fx-border-radius: 36;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.16), 26, 0.2, 0, 8);
+}
+
+.inventory-flow-icon {
+    -fx-font-size: 20px;
+    -fx-text-fill: #16743a;
+}
+
+.inventory-flow-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+}
+
+.inventory-flow-close {
+    -fx-font-size: 14px;
+    -fx-text-fill: #656558;
+}
+
+.inventory-flow-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #656558;
+}
+
+.inventory-flow-value {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+}
+
+.inventory-flow-sep {
+    -fx-min-height: 1;
+    -fx-background-color: #d6d3c4;
+}
+
+.inventory-flow-btn {
+    -fx-alignment: center;
+    -fx-padding: 10 14 10 14;
+    -fx-background-color: #8fe2a1;
+    -fx-background-radius: 14;
+    -fx-text-fill: #0e6632;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
