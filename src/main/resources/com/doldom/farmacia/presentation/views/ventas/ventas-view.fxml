@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="900.0" prefWidth="1600.0" styleClass="sales-screen" stylesheets="@ventas.css"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.doldom.farmacia.presentation.views.ventas.VentasController">
+
+    <fx:include source="/com/doldom/farmacia/presentation/components/sales/sidebar.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+
+    <VBox spacing="28.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="540.0" AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets bottom="18.0" left="50.0" right="38.0" top="18.0"/>
+        </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="16.0">
+            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="search-shell,sales-search-shell">
+                <Label styleClass="icon-mdl,top-icon" text="&#xE721;"/>
+                <TextField promptText="Buscar medicamentos, clientes o recetas..." styleClass="search-field"/>
+            </HBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label styleClass="icon-mdl,top-icon-btn" text="&#xE7F4;"/>
+            <Label styleClass="icon-mdl,top-icon-btn" text="&#xE713;"/>
+            <Label styleClass="icon-mdl,top-icon-btn" text="&#xE897;"/>
+            <Region styleClass="sales-v-sep"/>
+            <VBox alignment="CENTER_RIGHT">
+                <Label styleClass="sales-profile-name" text="Dr. Aris Thorne"/>
+                <Label styleClass="sales-profile-role" text="JEFE FARMACEUTICO"/>
+            </VBox>
+            <StackPane styleClass="sales-avatar">
+                <Label styleClass="sales-avatar-text" text="AT"/>
+            </StackPane>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="22.0">
+            <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                <Label styleClass="sales-title" text="Registro de venta"/>
+                <Label maxWidth="330.0" styleClass="sales-subtitle" text="Selecciona articulos para agregar a la sesion actual" wrapText="true"/>
+            </VBox>
+            <HBox fx:id="allCategoryCard" alignment="CENTER" spacing="10.0" styleClass="sales-category,active" onMouseClicked="#onFilterAll">
+                <Label text="Todas&#10;categorias"/>
+            </HBox>
+            <HBox fx:id="antibioticsCategoryCard" alignment="CENTER" spacing="10.0" styleClass="sales-category" onMouseClicked="#onFilterAntibiotics">
+                <Label text="Antibioticos"/>
+            </HBox>
+            <HBox fx:id="vitaminsCategoryCard" alignment="CENTER" spacing="10.0" styleClass="sales-category" onMouseClicked="#onFilterVitamins">
+                <Label text="Vitaminas"/>
+            </HBox>
+        </HBox>
+
+        <VBox spacing="14.0">
+            <VBox fx:id="productsContainer" spacing="18.0"/>
+            <HBox fx:id="productDots" alignment="CENTER" spacing="10.0"/>
+        </VBox>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <VBox spacing="18.0">
+            <Region styleClass="sales-divider"/>
+            <HBox alignment="CENTER_LEFT">
+                <Label fx:id="queueTitle" styleClass="patient-queue-title" text="COLA DE PACIENTES"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label styleClass="patient-next-btn" onMouseClicked="#onNextPatient" text="Atender siguiente"/>
+            </HBox>
+            <HBox fx:id="patientQueueContainer" spacing="20.0"/>
+        </VBox>
+    </VBox>
+
+    <VBox spacing="20.0" styleClass="cart-panel" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="120.0">
+        <HBox alignment="CENTER_LEFT">
+            <Label styleClass="cart-title" text="Carrito activo"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label styleClass="icon-mdl,cart-delete" onMouseClicked="#onClearCart" text="&#xE74D;"/>
+        </HBox>
+
+        <VBox fx:id="cartItemsContainer" spacing="20.0"/>
+
+        <Region styleClass="cart-divider"/>
+
+        <VBox spacing="16.0">
+            <HBox>
+                <Label styleClass="cart-summary-label" text="Subtotal"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="subtotalValue" styleClass="cart-summary-value" text="Q49.00"/>
+            </HBox>
+            <HBox>
+                <Label fx:id="taxSummaryLabel" styleClass="cart-summary-label" text="Impuesto (5%)"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <TextField fx:id="taxRateField" maxWidth="58.0" text="5" styleClass="tax-rate-field"/>
+                <Label fx:id="taxValue" styleClass="cart-summary-value" text="Q2.45"/>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+                <Label styleClass="cart-total-label" text="Total"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="totalValue" styleClass="cart-total-value" text="Q51.45"/>
+            </HBox>
+        </VBox>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <VBox spacing="18.0">
+            <Label styleClass="payment-title" text="METODO DE PAGO"/>
+            <HBox spacing="12.0">
+                <VBox fx:id="cashPayment" alignment="CENTER" spacing="10.0" styleClass="payment-method,active" onMouseClicked="#onSelectCash">
+                    <Label styleClass="icon-mdl,payment-icon,active" text="&#xE8C7;"/>
+                    <Label styleClass="payment-label,active" text="Efectivo"/>
+                </VBox>
+                <VBox fx:id="cardPayment" alignment="CENTER" spacing="10.0" styleClass="payment-method" onMouseClicked="#onSelectCard">
+                    <Label styleClass="icon-mdl,payment-icon" text="&#xE8C7;"/>
+                    <Label styleClass="payment-label" text="Tarjeta"/>
+                </VBox>
+                <VBox fx:id="digitalPayment" alignment="CENTER" spacing="10.0" styleClass="payment-method" onMouseClicked="#onSelectDigital">
+                    <Label styleClass="icon-mdl,payment-icon" text="&#xE968;"/>
+                    <Label styleClass="payment-label" text="Digital"/>
+                </VBox>
+            </HBox>
+            <Button maxWidth="1.7976931348623157E308" onAction="#onCompleteSale" styleClass="complete-sale-button" text="Completar venta"/>
+        </VBox>
+    </VBox>
+</AnchorPane>

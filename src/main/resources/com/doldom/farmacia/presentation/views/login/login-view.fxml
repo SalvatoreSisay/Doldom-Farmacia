@@ -84,13 +84,13 @@
                             <TextField fx:id="passwordVisibleField" onAction="#onLogin"
                                        promptText="••••••••" styleClass="field-input"/>
                         </StackPane>
-                        <Button mnemonicParsing="false" onAction="#onTogglePassword"
+                        <Button onAction="#onTogglePassword"
                                 styleClass="icon-button" text="&#xE890;"/>
                     </HBox>
                 </VBox>
-                <CheckBox mnemonicParsing="false" styleClass="remember-check"
+                <CheckBox styleClass="remember-check"
                           text="Recordar este equipo por 30 días"/>
-                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLogin"
+                <Button maxWidth="1.7976931348623157E308" onAction="#onLogin"
                         styleClass="login-button" text="Iniciar sesión  →"/>
             </VBox>
             <VBox alignment="CENTER" spacing="36.0">

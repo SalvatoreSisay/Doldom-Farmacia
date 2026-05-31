@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane fx:id="root" prefHeight="900.0" prefWidth="1600.0" styleClass="accounting-screen" stylesheets="@contabilidad.css"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.doldom.farmacia.presentation.views.contabilidad.ContabilidadController">
+
+    <fx:include source="/com/doldom/farmacia/presentation/components/accounting/sidebar.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="accounting-scroll" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+            <VBox spacing="32.0" styleClass="accounting-content">
+                <padding>
+                    <Insets bottom="30.0" left="34.0" right="34.0" top="14.0"/>
+                </padding>
+
+                <HBox alignment="CENTER_LEFT" spacing="18.0">
+                    <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="search-shell,accounting-search-shell">
+                        <Label styleClass="icon-mdl,top-icon" text="&#xE721;"/>
+                        <TextField promptText="Buscar transacciones, libros o facturas..." styleClass="search-field"/>
+                    </HBox>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label styleClass="icon-mdl,top-icon-btn" text="&#xE7F4;"/>
+                    <Label styleClass="icon-mdl,top-icon-btn" text="&#xE713;"/>
+                    <Label styleClass="icon-mdl,top-icon-btn" text="&#xE897;"/>
+                    <Region styleClass="accounting-v-sep"/>
+                    <VBox alignment="CENTER_RIGHT">
+                        <Label styleClass="accounting-branch-name" text="Oficina principal"/>
+                        <Label styleClass="accounting-branch-sub" text="Sucursal central"/>
+                    </VBox>
+                    <Label styleClass="icon-mdl,accounting-location-icon" text="&#xE707;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="24.0">
+                    <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                        <Label styleClass="accounting-title" text="Reportes contables"/>
+                        <Label styleClass="accounting-subtitle" text="Revisa rendimiento financiero y salud fiscal de todas las sucursales."/>
+                    </VBox>
+                    <HBox alignment="CENTER" spacing="10.0" styleClass="export-button">
+                        <Label styleClass="icon-mdl,export-icon" text="&#xE896;"/>
+                        <Label styleClass="export-text" text="Exportar Excel"/>
+                    </HBox>
+                    <HBox alignment="CENTER" spacing="10.0" styleClass="pdf-button">
+                        <Label styleClass="icon-mdl,pdf-icon" text="&#xE8A5;"/>
+                        <Label styleClass="pdf-text" text="Descargar PDF"/>
+                    </HBox>
+                </HBox>
+
+                <HBox spacing="18.0" styleClass="period-tabs">
+                    <Label styleClass="period-tab,active" text="Diario"/>
+                    <Label styleClass="period-tab" text="Semanal"/>
+                    <Label styleClass="period-tab" text="Mensual"/>
+                    <Label styleClass="period-tab" text="Anual"/>
+                </HBox>
+
+                <HBox spacing="24.0">
+                    <VBox spacing="28.0" styleClass="summary-card,revenue">
+                        <HBox alignment="CENTER_LEFT">
+                            <VBox spacing="8.0">
+                                <Label styleClass="summary-label,on-dark" text="INGRESOS TOTALES"/>
+                                <Label fx:id="totalRevenueValue" styleClass="summary-value,on-dark" text="Q142,580.00"/>
+                            </VBox>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <StackPane styleClass="summary-icon,on-dark">
+                                <Label styleClass="icon-mdl,summary-icon-text,on-dark" text="&#xE8E5;"/>
+                            </StackPane>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <Label styleClass="summary-pill,positive" text="+12.5%"/>
+                            <Label styleClass="summary-caption,on-dark" text="vs periodo anterior"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox spacing="28.0" styleClass="summary-card,expenses">
+                        <HBox alignment="CENTER_LEFT">
+                            <VBox spacing="8.0">
+                                <Label styleClass="summary-label" text="GASTOS OPERATIVOS"/>
+                                <Label fx:id="operatingExpensesValue" styleClass="summary-value" text="Q58,240.50"/>
+                            </VBox>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <StackPane styleClass="summary-icon,orange">
+                                <Label styleClass="icon-mdl,summary-icon-text,orange" text="&#xE8C7;"/>
+                            </StackPane>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <Label styleClass="summary-pill,negative" text="-4.2%"/>
+                            <Label styleClass="summary-caption" text="mejora de eficiencia"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox spacing="28.0" styleClass="summary-card,profit">
+                        <HBox alignment="CENTER_LEFT">
+                            <VBox spacing="8.0">
+                                <Label styleClass="summary-label,profit" text="UTILIDAD NETA"/>
+                                <Label fx:id="netProfitValue" styleClass="summary-value,profit" text="Q84,339.50"/>
+                            </VBox>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <StackPane styleClass="summary-icon,profit">
+                                <Label styleClass="icon-mdl,summary-icon-text,profit" text="&#xE8EA;"/>
+                            </StackPane>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <Label styleClass="summary-pill,margin" text="59.1%"/>
+                            <Label styleClass="summary-caption,profit" text="margen general"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+
+                <VBox spacing="28.0" styleClass="ledger-card">
+                    <HBox alignment="CENTER_LEFT">
+                        <HBox alignment="CENTER_LEFT" spacing="14.0">
+                            <Label styleClass="ledger-title" text="Libro de transacciones"/>
+                            <Label fx:id="entriesChip" styleClass="ledger-chip" text="Mostrando 142 entradas"/>
+                        </HBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label styleClass="icon-mdl,ledger-tool" text="&#xE71C;"/>
+                        <Label styleClass="icon-mdl,ledger-tool" text="&#xE712;"/>
+                    </HBox>
+
+                    <HBox spacing="0.0" styleClass="ledger-head">
+                        <Label styleClass="ledger-col,id" text="TRANSACCION"/>
+                        <Label styleClass="ledger-col,date" text="FECHA Y HORA"/>
+                        <Label styleClass="ledger-col,category" text="CATEGORIA"/>
+                        <Label styleClass="ledger-col,status" text="ESTADO"/>
+                        <Label styleClass="ledger-col,amount" text="MONTO"/>
+                    </HBox>
+
+                    <VBox spacing="14.0">
+                        <HBox alignment="CENTER_LEFT" styleClass="ledger-row">
+                            <Label styleClass="ledger-col,id,transaction-id" text="#TRX-88219"/>
+                            <VBox styleClass="ledger-col,date">
+                                <Label styleClass="ledger-date" text="Oct 24, 2023"/>
+                                <Label styleClass="ledger-time" text="09:42 AM"/>
+                            </VBox>
+                            <Label styleClass="ledger-col,category,ledger-category" text="Ventas farmaceuticas"/>
+                            <HBox alignment="CENTER_LEFT" styleClass="ledger-col,status">
+                                <Label styleClass="status-badge,done" text="COMPLETADO"/>
+                            </HBox>
+                            <Label styleClass="ledger-col,amount,amount-positive" text="+Q1,240.00"/>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" styleClass="ledger-row">
+                            <Label styleClass="ledger-col,id,transaction-id" text="#TRX-88220"/>
+                            <VBox styleClass="ledger-col,date">
+                                <Label styleClass="ledger-date" text="Oct 24, 2023"/>
+                                <Label styleClass="ledger-time" text="10:15 AM"/>
+                            </VBox>
+                            <Label styleClass="ledger-col,category,ledger-category" text="Proveedor: MedTech Inc."/>
+                            <HBox alignment="CENTER_LEFT" styleClass="ledger-col,status">
+                                <Label styleClass="status-badge,pending" text="PENDIENTE"/>
+                            </HBox>
+                            <Label styleClass="ledger-col,amount,amount-negative" text="-Q4,800.00"/>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" styleClass="ledger-row">
+                            <Label styleClass="ledger-col,id,transaction-id" text="#TRX-88221"/>
+                            <VBox styleClass="ledger-col,date">
+                                <Label styleClass="ledger-date" text="Oct 24, 2023"/>
+                                <Label styleClass="ledger-time" text="11:30 AM"/>
+                            </VBox>
+                            <Label styleClass="ledger-col,category,ledger-category" text="Ventas OTC"/>
+                            <HBox alignment="CENTER_LEFT" styleClass="ledger-col,status">
+                                <Label styleClass="status-badge,done" text="COMPLETADO"/>
+                            </HBox>
+                            <Label styleClass="ledger-col,amount,amount-positive" text="+Q850.25"/>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" styleClass="ledger-row">
+                            <Label styleClass="ledger-col,id,transaction-id" text="#TRX-88222"/>
+                            <VBox styleClass="ledger-col,date">
+                                <Label styleClass="ledger-date" text="Oct 24, 2023"/>
+                                <Label styleClass="ledger-time" text="01:05 PM"/>
+                            </VBox>
+                            <Label styleClass="ledger-col,category,ledger-category" text="Reembolso de seguro"/>
+                            <HBox alignment="CENTER_LEFT" styleClass="ledger-col,status">
+                                <Label styleClass="status-badge,done" text="COMPLETADO"/>
+                            </HBox>
+                            <Label styleClass="ledger-col,amount,amount-positive" text="+Q15,200.00"/>
+                        </HBox>
+                    </VBox>
+
+                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="view-all-link" text="Ver todas las transacciones"/>
+                </VBox>
+
+                <HBox spacing="32.0">
+                    <VBox spacing="24.0" styleClass="analysis-card" HBox.hgrow="ALWAYS">
+                        <Label styleClass="analysis-title" text="Distribucion de ingresos"/>
+                        <HBox alignment="CENTER_LEFT" spacing="36.0">
+                            <StackPane styleClass="donut-shell">
+                                <Circle radius="78.0" styleClass="donut-outer"/>
+                                <Circle radius="50.0" styleClass="donut-inner"/>
+                                <Label styleClass="donut-value" text="72%"/>
+                            </StackPane>
+                            <VBox spacing="18.0" HBox.hgrow="ALWAYS">
+                                <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                    <Region styleClass="legend-dot,prescriptions"/>
+                                    <Label styleClass="legend-label" text="Recetas"/>
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Label styleClass="legend-value" text="Q102k"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                    <Region styleClass="legend-dot,otc"/>
+                                    <Label styleClass="legend-label" text="Venta libre"/>
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Label styleClass="legend-value" text="Q28k"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                    <Region styleClass="legend-dot,others"/>
+                                    <Label styleClass="legend-label" text="Otros"/>
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Label styleClass="legend-value" text="Q12k"/>
+                                </HBox>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                    <VBox spacing="22.0" styleClass="analysis-card" HBox.hgrow="ALWAYS">
+                        <VBox spacing="6.0">
+                            <Label styleClass="analysis-title" text="Rendimiento por sucursal"/>
+                            <Label styleClass="analysis-subtitle" text="Comparacion de utilidad neta por ubicacion activa."/>
+                        </VBox>
+                        <VBox spacing="22.0">
+                            <VBox spacing="8.0">
+                                <HBox>
+                                    <Label styleClass="branch-name" text="CENTRAL HUB (HQ)"/>
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Label styleClass="branch-value" text="Q45,200"/>
+                                </HBox>
+                                <HBox spacing="0.0" styleClass="branch-track">
+                                    <Region styleClass="branch-bar,one"/>
+                                </HBox>
+                            </VBox>
+                            <VBox spacing="8.0">
+                                <HBox>
+                                    <Label styleClass="branch-name" text="EASTSIDE CLINIC"/>
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Label styleClass="branch-value" text="Q28,150"/>
+                                </HBox>
+                                <HBox spacing="0.0" styleClass="branch-track">
+                                    <Region styleClass="branch-bar,two"/>
+                                </HBox>
+                            </VBox>
+                            <VBox spacing="8.0">
+                                <HBox>
+                                    <Label styleClass="branch-name" text="NORTHVALE PHARMA"/>
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Label styleClass="branch-value" text="Q10,989"/>
+                                </HBox>
+                                <HBox spacing="0.0" styleClass="branch-track">
+                                    <Region styleClass="branch-bar,three"/>
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+                </HBox>
+
+                <Region styleClass="accounting-footer-line"/>
+                <HBox alignment="CENTER_LEFT" spacing="28.0">
+                    <Label styleClass="footer-copy" text="2026 DOLDOM Farmacia Digital. Registros financieros cifrados y conformes."/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label styleClass="footer-link" text="Privacidad"/>
+                    <Label styleClass="footer-link" text="Terminos"/>
+                    <Label styleClass="footer-link" text="Auditoria"/>
+                </HBox>
+            </VBox>
+        </content>
+    </ScrollPane>
+</AnchorPane>

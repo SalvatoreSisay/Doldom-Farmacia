@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="900.0" prefWidth="1600.0" styleClass="calendar-screen" stylesheets="@calendario.css"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.doldom.farmacia.presentation.views.calendario.CalendarioController">
+
+    <fx:include source="/com/doldom/farmacia/presentation/components/calendar/sidebar.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+
+    <VBox spacing="22.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets bottom="24.0" left="34.0" right="40.0" top="18.0"/>
+        </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="16.0">
+            <Label styleClass="calendar-page-title" text="Calendario"/>
+            <Label styleClass="calendar-month-pill" text="MAYO 2026"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="search-shell,calendar-search-shell">
+                <Label styleClass="icon-mdl,top-icon" text="&#xE721;"/>
+                <TextField promptText="Buscar eventos..." styleClass="search-field"/>
+            </HBox>
+            <Label styleClass="icon-mdl,top-icon-btn" text="&#xE7F4;"/>
+            <StackPane styleClass="calendar-profile">
+                <Label styleClass="calendar-profile-text" text="ET"/>
+            </StackPane>
+        </HBox>
+
+        <HBox spacing="28.0" VBox.vgrow="ALWAYS">
+            <VBox spacing="22.0" styleClass="calendar-card" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" spacing="18.0">
+                    <Label styleClass="icon-mdl,calendar-arrow" text="&#xE76B;"/>
+                    <Label styleClass="icon-mdl,calendar-arrow" text="&#xE76C;"/>
+                    <Label styleClass="calendar-card-title" text="Mayo 2026"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <HBox alignment="CENTER" styleClass="calendar-view-switch">
+                        <Label styleClass="calendar-view-option,active" text="Mes"/>
+                        <Label styleClass="calendar-view-option" text="Semana"/>
+                        <Label styleClass="calendar-view-option" text="Dia"/>
+                    </HBox>
+                </HBox>
+
+                <GridPane hgap="10.0" styleClass="calendar-weekdays">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                    </columnConstraints>
+                    <children>
+                        <Label styleClass="calendar-weekday" text="LUN"/>
+                        <Label styleClass="calendar-weekday" text="MAR" GridPane.columnIndex="1"/>
+                        <Label styleClass="calendar-weekday" text="MIE" GridPane.columnIndex="2"/>
+                        <Label styleClass="calendar-weekday" text="JUE" GridPane.columnIndex="3"/>
+                        <Label styleClass="calendar-weekday" text="VIE" GridPane.columnIndex="4"/>
+                        <Label styleClass="calendar-weekday" text="SAB" GridPane.columnIndex="5"/>
+                        <Label styleClass="calendar-weekday" text="DOM" GridPane.columnIndex="6"/>
+                    </children>
+                </GridPane>
+
+                <GridPane hgap="10.0" vgap="12.0" styleClass="calendar-grid" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                        <ColumnConstraints percentWidth="14.2857"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="16.6667"/>
+                        <RowConstraints percentHeight="16.6667"/>
+                        <RowConstraints percentHeight="16.6667"/>
+                        <RowConstraints percentHeight="16.6667"/>
+                        <RowConstraints percentHeight="16.6667"/>
+                        <RowConstraints percentHeight="16.6667"/>
+                    </rowConstraints>
+                    <children>
+                        <VBox spacing="8.0" styleClass="calendar-day,muted">
+                            <Label styleClass="calendar-day-number" text="27"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day,muted" GridPane.columnIndex="1">
+                            <Label styleClass="calendar-day-number" text="28"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day,muted" GridPane.columnIndex="2">
+                            <Label styleClass="calendar-day-number" text="29"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day,muted" GridPane.columnIndex="3">
+                            <Label styleClass="calendar-day-number" text="30"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="4">
+                            <Label styleClass="calendar-day-number" text="1"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="5">
+                            <Label styleClass="calendar-day-number" text="2"/>
+                            <Label styleClass="calendar-event,orange" text="Turno Dra. Elena" wrapText="true"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="6">
+                            <Label styleClass="calendar-day-number" text="3"/>
+                        </VBox>
+
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.rowIndex="1">
+                            <Label styleClass="calendar-day-number" text="4"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <Label styleClass="calendar-day-number" text="5"/>
+                            <Label styleClass="calendar-event,green" text="Entrega proveedor" wrapText="true"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <Label styleClass="calendar-day-number" text="6"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                            <Label styleClass="calendar-day-number" text="7"/>
+                            <Label styleClass="calendar-event,red" text="Revision vencimientos" wrapText="true"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                            <Label styleClass="calendar-day-number" text="8"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                            <Label styleClass="calendar-day-number" text="9"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                            <Label styleClass="calendar-day-number" text="10"/>
+                        </VBox>
+
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.rowIndex="2">
+                            <Label styleClass="calendar-day-number" text="11"/>
+                            <Label styleClass="calendar-event,neutral" text="Auditoria stock" wrapText="true"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <Label styleClass="calendar-day-number" text="12"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <Label styleClass="calendar-day-number" text="13"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                            <Label styleClass="calendar-day-number" text="14"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="calendar-day,featured" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                            <Label styleClass="icon-mdl,calendar-feature-icon" text="&#xE734;"/>
+                            <Label styleClass="calendar-feature-title" text="Jornada de salud" wrapText="true"/>
+                            <Label styleClass="calendar-feature-sub" text="Seminario clinico&#10;(15-16 may)"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                            <Label styleClass="calendar-day-number" text="16"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                            <Label styleClass="calendar-day-number" text="17"/>
+                        </VBox>
+
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.rowIndex="3">
+                            <Label styleClass="calendar-day-number" text="18"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <Label styleClass="calendar-day-number" text="19"/>
+                            <Label styleClass="calendar-event,orange" text="Turno Dr. Reyes" wrapText="true"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <Label styleClass="calendar-day-number" text="20"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                            <Label styleClass="calendar-day-number" text="21"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                            <Label styleClass="calendar-day-number" text="23"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                            <Label styleClass="calendar-day-number" text="24"/>
+                        </VBox>
+
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.rowIndex="4">
+                            <Label styleClass="calendar-day-number" text="25"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <Label styleClass="calendar-day-number" text="26"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <Label styleClass="calendar-day-number" text="27"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day,today" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                            <HBox alignment="CENTER_LEFT">
+                                <Label styleClass="calendar-day-number,today" text="28"/>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Region styleClass="calendar-today-dot"/>
+                            </HBox>
+                            <Label styleClass="calendar-event,green" text="Cierre caja" wrapText="true"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                            <Label styleClass="calendar-day-number" text="29"/>
+                            <Label styleClass="calendar-event,red" text="Reporte controlado" wrapText="true"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                            <Label styleClass="calendar-day-number" text="30"/>
+                        </VBox>
+                        <VBox spacing="8.0" styleClass="calendar-day" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                            <Label styleClass="calendar-day-number" text="31"/>
+                        </VBox>
+                    </children>
+                </GridPane>
+            </VBox>
+
+            <VBox spacing="26.0" styleClass="calendar-right-rail">
+                <VBox spacing="18.0" styleClass="calendar-side-card">
+                    <HBox alignment="CENTER_LEFT">
+                        <Label styleClass="calendar-side-title" text="Tareas de hoy"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label fx:id="pendingTasksLabel" styleClass="calendar-pending-pill" text="0 pendientes"/>
+                    </HBox>
+                    <VBox fx:id="calendarTasksList" spacing="14.0"/>
+                    <Button maxWidth="1.7976931348623157E308" onAction="#onCreateTask" styleClass="calendar-create-button" text="+  Crear tarea"/>
+                </VBox>
+
+                <VBox spacing="18.0" styleClass="calendar-focus-card" VBox.vgrow="ALWAYS">
+                    <Label styleClass="calendar-side-title" text="Foco farmaceutico"/>
+                    <VBox spacing="12.0" styleClass="calendar-alert-card">
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <Label styleClass="icon-mdl,calendar-alert-icon" text="&#xE7BA;"/>
+                            <Label styleClass="calendar-alert-type" text="ALERTA DE PERSONAL"/>
+                        </HBox>
+                        <Label styleClass="calendar-alert-text" text="Dra. Elena disponible de 09:00 a 17:00 para revisiones clinicas." wrapText="true"/>
+                    </VBox>
+                    <VBox spacing="12.0" styleClass="calendar-alert-card">
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <Label styleClass="icon-mdl,calendar-warning-icon" text="&#xE814;"/>
+                            <Label styleClass="calendar-warning-type" text="ADVERTENCIA DE INVENTARIO"/>
+                        </HBox>
+                        <Label styleClass="calendar-alert-text" text="Lisinopril 10mg vence en 48 horas. Reubicar a stock frontal." wrapText="true"/>
+                    </VBox>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <StackPane styleClass="calendar-floating-action">
+                        <Label styleClass="icon-mdl,calendar-floating-icon" text="&#xE787;"/>
+                    </StackPane>
+                </VBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>

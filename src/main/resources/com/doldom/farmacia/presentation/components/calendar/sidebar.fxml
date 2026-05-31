@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="250.0" styleClass="sidebar" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.doldom.farmacia.presentation.components.calendar.SidebarCalendarController">
+    <padding>
+        <Insets bottom="16.0" left="18.0" right="18.0" top="20.0"/>
+    </padding>
+    <VBox spacing="8.0">
+        <Label styleClass="brand-title" text="DOLDOM"/>
+        <Label styleClass="brand-subtitle" text="FARMACIA DIGITAL"/>
+    </VBox>
+
+    <VBox spacing="8.0" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="20.0"/>
+        </padding>
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenHome">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xE80F;"/>
+            <Label styleClass="nav-label" text="Inicio"/>
+        </HBox>
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenInventario">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xE719;"/>
+            <Label styleClass="nav-label" text="Inventario"/>
+        </HBox>
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenVentas">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xEAFD;"/>
+            <Label styleClass="nav-label" text="Ventas"/>
+        </HBox>
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenCompras">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xE7BF;"/>
+            <Label styleClass="nav-label" text="Compras"/>
+        </HBox>
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenCaja">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xE7F8;"/>
+            <Label styleClass="nav-label" text="Caja"/>
+        </HBox>
+        <HBox spacing="16.0" styleClass="nav-item-active">
+            <Label styleClass="icon-mdl,nav-icon-active" text="&#xE787;"/>
+            <Label styleClass="nav-label-active" text="Calendario"/>
+        </HBox>
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenContabilidad">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xE7EE;"/>
+            <Label styleClass="nav-label" text="Contabilidad"/>
+        </HBox>
+        <HBox spacing="16.0" styleClass="nav-item">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xE9D2;"/>
+            <Label styleClass="nav-label" text="Panel"/>
+        </HBox>
+    </VBox>
+
+    <VBox spacing="14.0">
+        <Button maxWidth="1.7976931348623157E308" onAction="#onNewPrescription" styleClass="new-rx-button" text="  +   Nueva receta"/>
+        <HBox alignment="CENTER_LEFT" spacing="14.0">
+            <StackPane styleClass="avatar">
+                <Label styleClass="avatar-text" text="ET"/>
+            </StackPane>
+            <VBox spacing="2.0">
+                <Label styleClass="profile-name" text="Dra. Elena"/>
+                <Label styleClass="profile-role" text="QUIMICA FARMACEUTICA"/>
+            </VBox>
+        </HBox>
+    </VBox>
+</VBox>

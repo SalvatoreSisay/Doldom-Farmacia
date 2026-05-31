@@ -1,6 +1,7 @@
 package com.doldom.farmacia.presentation.views.login
 
 import com.doldom.farmacia.presentation.navigation.Navigator
+import com.doldom.farmacia.presentation.state.AppSession
 import javafx.fxml.FXML
 import javafx.scene.control.Alert
 import javafx.scene.control.PasswordField
@@ -61,6 +62,7 @@ class LoginController {
     }
 
     private fun openHomeView() {
+        AppSession.startShift()
         Navigator.goToHome()
     }
 

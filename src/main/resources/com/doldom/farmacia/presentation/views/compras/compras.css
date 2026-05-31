@@ -1,0 +1,403 @@
+@import url("../home/home.css");
+
+.purchase-screen {
+    -fx-background-color: #feffd5;
+    -fx-font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.purchase-scroll,
+.purchase-scroll .viewport,
+.purchase-content {
+    -fx-background-color: #feffd5;
+}
+
+.purchase-scroll {
+    -fx-background: #feffd5;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.purchase-scroll .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+}
+
+.purchase-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #c7c4b5;
+    -fx-background-radius: 999;
+}
+
+.purchase-search-shell {
+    -fx-pref-width: 560;
+    -fx-max-width: 780;
+}
+
+.purchase-avatar {
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-max-width: 50;
+    -fx-max-height: 50;
+    -fx-background-color: #9eeab0;
+    -fx-background-radius: 999;
+    -fx-border-color: #0e6632;
+    -fx-border-radius: 999;
+    -fx-border-width: 2;
+}
+
+.purchase-avatar-text {
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.purchase-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 46px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #16743a;
+}
+
+.purchase-subtitle {
+    -fx-font-size: 20px;
+    -fx-line-spacing: 6;
+    -fx-text-fill: #656558;
+}
+
+.purchase-section-card {
+    -fx-padding: 32 30 30 30;
+    -fx-background-color: #fbfaf2;
+    -fx-background-radius: 28;
+    -fx-border-color: #ebe8d8;
+    -fx-border-radius: 28;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.08), 12, 0.12, 0, 3);
+}
+
+.products-card {
+    -fx-padding: 32 30 32 30;
+}
+
+.purchase-section-icon {
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-max-width: 50;
+    -fx-max-height: 50;
+    -fx-background-color: #b9efc8;
+    -fx-background-radius: 14;
+}
+
+.purchase-section-icon-text {
+    -fx-font-size: 24px;
+    -fx-text-fill: #16743a;
+}
+
+.purchase-section-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.purchase-field-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #656558;
+}
+
+.purchase-combo,
+.purchase-select,
+.purchase-input {
+    -fx-min-height: 60;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-color: transparent;
+    -fx-padding: 0 18 0 18;
+}
+
+.purchase-combo,
+.purchase-input {
+    -fx-font-size: 20px;
+    -fx-text-fill: #5c6473;
+}
+
+.purchase-combo .list-cell {
+    -fx-font-size: 18px;
+    -fx-text-fill: #1f2018;
+}
+
+.purchase-select-text {
+    -fx-font-size: 20px;
+    -fx-text-fill: #1f2018;
+}
+
+.purchase-select-arrow {
+    -fx-font-size: 16px;
+    -fx-text-fill: #5c6473;
+}
+
+.add-row-control {
+    -fx-padding: 6 12 6 12;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+
+.add-row-control:hover {
+    -fx-background-color: #e8e6d8;
+}
+
+.add-row-icon {
+    -fx-font-size: 22px;
+    -fx-text-fill: #16743a;
+}
+
+.add-row-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #16743a;
+}
+
+.received-row {
+    -fx-min-height: 135;
+    -fx-padding: 20 20 20 20;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 18;
+    -fx-cursor: hand;
+}
+
+.received-row:hover {
+    -fx-background-color: #fbfff7;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.10), 14, 0.14, 0, 4);
+}
+
+.received-row.selected {
+    -fx-background-color: #dff3e4;
+}
+
+.received-name-col { -fx-pref-width: 300; }
+.received-qty-col { -fx-pref-width: 75; }
+.received-cost-col { -fx-pref-width: 82; }
+.received-date-col { -fx-pref-width: 145; }
+
+.received-header,
+.received-subheader {
+    -fx-font-size: 13px;
+    -fx-letter-spacing: 1;
+    -fx-text-fill: #a2a096;
+}
+
+.received-product-name,
+.received-value {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #11120d;
+}
+
+.received-calendar {
+    -fx-font-size: 18px;
+    -fx-text-fill: #11120d;
+    -fx-cursor: hand;
+}
+
+.received-delete {
+    -fx-font-size: 22px;
+    -fx-text-fill: #8f160c;
+    -fx-cursor: hand;
+}
+
+.received-edit-field {
+    -fx-background-color: #f6f4e6;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #11120d;
+}
+
+.received-empty-text {
+    -fx-padding: 18;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 18;
+    -fx-font-size: 16px;
+    -fx-text-fill: #656558;
+}
+
+.add-product-placeholder {
+    -fx-min-height: 74;
+    -fx-background-color: transparent;
+    -fx-background-radius: 18;
+    -fx-border-color: #ddd9c8;
+    -fx-border-width: 2;
+    -fx-border-style: dashed;
+    -fx-border-radius: 18;
+    -fx-cursor: hand;
+}
+
+.add-product-placeholder:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.70);
+}
+
+.add-product-plus,
+.add-product-text {
+    -fx-font-size: 21px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #aaa89c;
+}
+
+.purchase-summary-panel {
+    -fx-pref-width: 376;
+    -fx-min-width: 376;
+    -fx-padding: 44 42 42 42;
+    -fx-background-color: #e8e6d8;
+    -fx-background-radius: 28;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.12), 20, 0.18, 0, 8);
+}
+
+.purchase-summary-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #24251d;
+}
+
+.summary-label {
+    -fx-font-size: 19px;
+    -fx-text-fill: #656558;
+}
+
+.summary-value {
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.summary-input {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+    -fx-alignment: center-right;
+}
+
+.purchase-summary-divider {
+    -fx-min-height: 1;
+    -fx-background-color: #d8d5c6;
+}
+
+.summary-total-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #656558;
+}
+
+.summary-total-value {
+    -fx-font-size: 38px;
+    -fx-font-weight: 400;
+    -fx-text-fill: #16743a;
+}
+
+.summary-payable {
+    -fx-font-size: 11px;
+    -fx-text-fill: #7c7a6f;
+}
+
+.payment-status-card {
+    -fx-min-height: 120;
+    -fx-padding: 16 20 16 20;
+    -fx-background-color: #fbfaf2;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.payment-status-card:hover {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.10), 14, 0.14, 0, 4);
+}
+
+.payment-status-icon {
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-max-width: 50;
+    -fx-max-height: 50;
+    -fx-background-color: #ffd7bf;
+    -fx-background-radius: 999;
+}
+
+.payment-status-icon-text {
+    -fx-font-size: 22px;
+    -fx-text-fill: #a95400;
+}
+
+.payment-status-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #a95400;
+}
+
+.payment-status-value {
+    -fx-font-size: 22px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #7e3300;
+}
+
+.payment-status-edit {
+    -fx-font-size: 22px;
+    -fx-text-fill: #656558;
+}
+
+.register-purchase-button,
+.save-draft-button {
+    -fx-min-height: 70;
+    -fx-background-radius: 18;
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-cursor: hand;
+}
+
+.register-purchase-button {
+    -fx-background-color: #ac5400;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(96, 48, 0, 0.24), 12, 0.18, 0, 5);
+}
+
+.save-draft-button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #656558;
+}
+
+.purchase-tip-card {
+    -fx-min-height: 160;
+    -fx-max-height: 160;
+    -fx-background-color: #063740;
+    -fx-background-radius: 18;
+}
+
+.purchase-tip-image {
+    -fx-opacity: 0.92;
+}
+
+.purchase-tip-text {
+    -fx-padding: 0 0 20 22;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+}
+
+.purchase-secure-badge {
+    -fx-pref-width: 292;
+    -fx-min-height: 70;
+    -fx-padding: 0 26 0 26;
+    -fx-background-color: #dbf7bb;
+    -fx-background-radius: 18;
+}
+
+.purchase-secure-icon {
+    -fx-font-size: 24px;
+    -fx-text-fill: #16743a;
+}
+
+.purchase-secure-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #0e6632;
+}

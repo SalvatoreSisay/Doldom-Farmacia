@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="900.0" prefWidth="1600.0" styleClass="purchase-screen" stylesheets="@compras.css"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.doldom.farmacia.presentation.views.compras.ComprasController">
+
+    <fx:include source="/com/doldom/farmacia/presentation/components/purchases/sidebar.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="purchase-scroll" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+            <AnchorPane minHeight="1080.0" prefWidth="1350.0" styleClass="purchase-content">
+
+    <VBox spacing="34.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="438.0" AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets bottom="0.0" left="50.0" right="26.0" top="18.0"/>
+        </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="16.0">
+            <HBox fx:id="searchShell" alignment="CENTER_LEFT" spacing="10.0" styleClass="search-shell,purchase-search-shell">
+                <Label styleClass="icon-mdl,top-icon" text="&#xE721;"/>
+                <TextField fx:id="searchField" promptText="Buscar producto recibido..." styleClass="search-field"/>
+            </HBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label styleClass="icon-mdl,top-icon-btn" text="&#xE7F4;"/>
+            <Label styleClass="icon-mdl,top-icon-btn" text="&#xE713;"/>
+            <Label styleClass="icon-mdl,top-icon-btn" text="&#xE897;"/>
+            <StackPane styleClass="purchase-avatar">
+                <Label styleClass="purchase-avatar-text" text="AT"/>
+            </StackPane>
+        </HBox>
+
+        <VBox spacing="8.0">
+            <Label styleClass="purchase-title" text="Registro de compra"/>
+            <Label maxWidth="820.0" styleClass="purchase-subtitle"
+                   text="Registra nuevo stock medicinal y adquisiciones de cadena de suministro en el repositorio de farmacia. Usa capas tonales para mayor claridad."
+                   wrapText="true"/>
+        </VBox>
+
+        <VBox spacing="40.0">
+            <VBox spacing="28.0" styleClass="purchase-section-card">
+                <HBox alignment="CENTER_LEFT" spacing="16.0">
+                    <StackPane styleClass="purchase-section-icon">
+                        <Label styleClass="icon-mdl,purchase-section-icon-text" text="&#xE7C1;"/>
+                    </StackPane>
+                    <Label styleClass="purchase-section-title" text="Informacion del proveedor"/>
+                </HBox>
+
+                <HBox spacing="30.0">
+                    <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+                        <Label styleClass="purchase-field-label" text="Seleccionar proveedor"/>
+                        <ComboBox fx:id="supplierCombo" maxWidth="1.7976931348623157E308" promptText="Seleccionar proveedor" styleClass="purchase-combo"/>
+                    </VBox>
+                    <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+                        <Label styleClass="purchase-field-label" text="Numero de factura"/>
+                        <TextField fx:id="invoiceField" promptText="INV-0000-000" styleClass="purchase-input"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <VBox spacing="28.0" styleClass="purchase-section-card,products-card">
+                <HBox alignment="CENTER_LEFT" spacing="16.0">
+                    <StackPane styleClass="purchase-section-icon">
+                        <Label styleClass="icon-mdl,purchase-section-icon-text" text="&#xE8B0;"/>
+                    </StackPane>
+                    <Label styleClass="purchase-section-title" text="Productos recibidos"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <HBox alignment="CENTER" spacing="10.0" styleClass="add-row-control" onMouseClicked="#onAddRow">
+                        <Label styleClass="icon-mdl,add-row-icon" text="&#xE710;"/>
+                        <Label styleClass="add-row-text" text="Agregar fila"/>
+                    </HBox>
+                </HBox>
+
+                <VBox spacing="20.0">
+                    <VBox fx:id="receivedRows" spacing="20.0"/>
+                    <HBox alignment="CENTER" spacing="14.0" styleClass="add-product-placeholder" onMouseClicked="#onOpenAddProductDialog">
+                        <Label styleClass="add-product-plus" text="+"/>
+                        <Label styleClass="add-product-text" text="Agregar otro producto a esta entrada"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </VBox>
+    </VBox>
+
+    <VBox spacing="28.0" styleClass="purchase-summary-panel" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="290.0">
+        <Label styleClass="purchase-summary-title" text="Resumen de compra"/>
+
+        <VBox spacing="26.0">
+            <HBox>
+                <Label styleClass="summary-label" text="Subtotal"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="subtotalValue" styleClass="summary-value" text="Q1,500.00"/>
+            </HBox>
+            <HBox>
+                <Label styleClass="summary-label" text="Envio"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <TextField fx:id="shippingField" maxWidth="92.0" styleClass="summary-input" text="45.00"/>
+            </HBox>
+            <HBox>
+                <Label fx:id="taxLabel" styleClass="summary-label" text="Impuesto (5%)"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <TextField fx:id="taxRateField" maxWidth="64.0" styleClass="summary-input" text="5"/>
+                <Label fx:id="taxValue" styleClass="summary-value" text="Q77.25"/>
+            </HBox>
+        </VBox>
+
+        <Region styleClass="purchase-summary-divider"/>
+
+        <HBox alignment="CENTER_LEFT">
+            <VBox>
+                <Label styleClass="summary-total-label" text="Monto"/>
+                <Label styleClass="summary-total-label" text="total"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <VBox alignment="CENTER_RIGHT" spacing="2.0">
+                <Label fx:id="totalValue" styleClass="summary-total-value" text="Q1,622.25"/>
+                <Label styleClass="summary-payable" text="PAGABLE AL PROVEEDOR"/>
+            </VBox>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="payment-status-card" onMouseClicked="#onEditPaymentStatus">
+            <StackPane styleClass="payment-status-icon">
+                <Label styleClass="icon-mdl,payment-status-icon-text" text="&#xE8C7;"/>
+            </StackPane>
+            <VBox HBox.hgrow="ALWAYS">
+                <Label styleClass="payment-status-label" text="Estado de pago"/>
+                <Label fx:id="paymentStatusValue" styleClass="payment-status-value" text="Vence en 30 dias"/>
+            </VBox>
+            <Label styleClass="icon-mdl,payment-status-edit" text="&#xE70F;"/>
+        </HBox>
+
+        <VBox spacing="16.0">
+            <Button maxWidth="1.7976931348623157E308" onAction="#onRegisterPurchase" styleClass="register-purchase-button" text="Registrar compra"/>
+            <Button maxWidth="1.7976931348623157E308" onAction="#onSaveDraft" styleClass="save-draft-button" text="Guardar borrador"/>
+        </VBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="purchase-secure-badge">
+            <Label styleClass="icon-mdl,purchase-secure-icon" text="&#xE83D;"/>
+            <Label styleClass="purchase-secure-text" text="Registro seguro y conforme habilitado"/>
+        </HBox>
+
+        <StackPane styleClass="purchase-tip-card">
+            <ImageView fitHeight="160.0" fitWidth="290.0" preserveRatio="false" styleClass="purchase-tip-image">
+                <image>
+                    <Image url="@images/purchase-lab-card.png"/>
+                </image>
+            </ImageView>
+            <Label alignment="BOTTOM_LEFT" maxWidth="250.0" styleClass="purchase-tip-text" text="Verifica numeros de lote contra la nota de entrega" wrapText="true"/>
+        </StackPane>
+    </VBox>
+
+            </AnchorPane>
+        </content>
+    </ScrollPane>
+</AnchorPane>

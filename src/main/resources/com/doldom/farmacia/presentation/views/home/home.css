@@ -17,7 +17,7 @@
 .brand-subtitle {
     -fx-font-size: 8px;
     -fx-text-fill: #656558;
-    -fx-letter-spacing: 1.2px;
+    -fx-letter-spacing: 1px;
 }
 
 .icon-mdl {
@@ -155,7 +155,7 @@
 }
 
 .sync-text {
-    -fx-font-size: 7.5px;
+    -fx-font-size: 8px;
     -fx-font-weight: 600;
     -fx-text-fill: #656558;
 }
@@ -168,6 +168,12 @@
     -fx-min-height: 185;
     -fx-pref-height: 185;
     -fx-max-height: 185;
+    -fx-cursor: hand;
+}
+
+.quick-card:hover {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.14), 18, 0.18, 0, 6);
 }
 
 .quick-icon {
@@ -267,6 +273,7 @@
 .calendar-link {
     -fx-font-size: 10px;
     -fx-text-fill: #0d6a33;
+    -fx-cursor: hand;
 }
 
 .task-card {
@@ -274,6 +281,11 @@
     -fx-background-radius: 16;
     -fx-padding: 12 16 12 16;
     -fx-alignment: center-left;
+    -fx-cursor: hand;
+}
+
+.task-card:hover {
+    -fx-background-color: #ffffff;
 }
 
 .task-card.urgent { -fx-border-color: transparent transparent transparent #b03c23; -fx-border-width: 0 0 0 4; }
@@ -298,6 +310,11 @@
 .task-tag {
     -fx-font-size: 9px;
     -fx-font-weight: 700;
+}
+
+.task-breakdown {
+    -fx-font-size: 9px;
+    -fx-font-weight: 800;
 }
 
 .urgent-text { -fx-text-fill: #b03c23; }
@@ -387,4 +404,69 @@
     -fx-font-size: 9px;
     -fx-text-fill: #0e6632;
     -fx-line-spacing: 4;
+}
+
+.dialog-pane {
+    -fx-background-color: #fcfaed;
+    -fx-background-radius: 24;
+    -fx-padding: 18;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #fcfaed;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.dialog-pane .content {
+    -fx-background-color: #fcfaed;
+}
+
+.dialog-pane .button {
+    -fx-background-radius: 14;
+    -fx-padding: 10 18 10 18;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+    -fx-background-color: #ebe9d8;
+}
+
+.dialog-pane .button:default {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to right, #21733d 0%, #8be8a0 100%);
+}
+
+.dialog-pane .text-field,
+.dialog-pane .text-area,
+.dialog-pane .combo-box,
+.dialog-pane .date-picker {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(187, 186, 170, 0.20);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+}
+
+.dialog-pane .text-area .content {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+}
+
+.prescription-dialog-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #656558;
+}
+
+.prescription-dialog-total {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
 }

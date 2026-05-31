@@ -1,0 +1,453 @@
+@import url("../home/home.css");
+
+.sales-screen {
+    -fx-background-color: #feffd5;
+    -fx-font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.sales-search-shell {
+    -fx-max-width: 560;
+    -fx-pref-width: 560;
+}
+
+.sales-v-sep {
+    -fx-min-width: 1;
+    -fx-pref-width: 1;
+    -fx-max-width: 1;
+    -fx-min-height: 48;
+    -fx-background-color: #d4d2c3;
+}
+
+.sales-profile-name {
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.sales-profile-role {
+    -fx-font-size: 10px;
+    -fx-text-fill: #656558;
+}
+
+.sales-avatar {
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-max-width: 50;
+    -fx-max-height: 50;
+    -fx-background-color: #9eeab0;
+    -fx-background-radius: 999;
+    -fx-border-color: #0e6632;
+    -fx-border-width: 2;
+    -fx-border-radius: 999;
+}
+
+.sales-avatar-text {
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.sales-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 38px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #16743a;
+}
+
+.sales-subtitle {
+    -fx-font-size: 21px;
+    -fx-line-spacing: 4;
+    -fx-text-fill: #656558;
+}
+
+.sales-category {
+    -fx-pref-width: 128;
+    -fx-min-height: 70;
+    -fx-padding: 10 14 10 14;
+    -fx-background-color: #e8e6d8;
+    -fx-background-radius: 16;
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+    -fx-cursor: hand;
+}
+
+.sales-category.active {
+    -fx-background-color: #e3e0cf;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.10), 18, 0.18, 0, 6);
+}
+
+.sales-category:hover {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.12), 18, 0.18, 0, 6);
+}
+
+.product-card {
+    -fx-pref-width: 206;
+    -fx-min-width: 206;
+    -fx-max-width: 206;
+    -fx-pref-height: 274;
+    -fx-min-height: 274;
+    -fx-max-height: 274;
+    -fx-padding: 26 26 26 26;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-cursor: hand;
+}
+
+.product-card:hover {
+    -fx-background-color: #fbfff7;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.14), 22, 0.18, 0, 8);
+}
+
+.product-tag {
+    -fx-padding: 7 14 7 14;
+    -fx-background-radius: 999;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 1;
+}
+
+.product-tag.green {
+    -fx-background-color: #b9efc8;
+    -fx-text-fill: #235137;
+}
+
+.product-tag.orange {
+    -fx-background-color: #ffd7bf;
+    -fx-text-fill: #7e3300;
+}
+
+.product-price {
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.product-name {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-line-spacing: 1;
+    -fx-text-fill: #1f2018;
+}
+
+.product-meta {
+    -fx-font-size: 15px;
+    -fx-line-spacing: 3;
+    -fx-text-fill: #656558;
+}
+
+.stock-dot {
+    -fx-min-width: 10;
+    -fx-min-height: 10;
+    -fx-max-width: 10;
+    -fx-max-height: 10;
+    -fx-background-radius: 999;
+    -fx-cursor: hand;
+}
+
+.stock-dot.solid {
+    -fx-background-color: #16743a;
+}
+
+.stock-dot.muted {
+    -fx-background-color: #d0e3d4;
+}
+
+.stock-dot.active {
+    -fx-min-width: 24;
+    -fx-max-width: 24;
+    -fx-background-color: #16743a;
+}
+
+.stock-dot:hover {
+    -fx-background-color: #8deea1;
+}
+
+.stock-warning,
+.stock-ok {
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+}
+
+.stock-warning {
+    -fx-text-fill: #ba220f;
+}
+
+.stock-ok {
+    -fx-text-fill: #0e6632;
+}
+
+.sales-add-btn {
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-max-width: 50;
+    -fx-max-height: 50;
+    -fx-background-color: #8deea1;
+    -fx-background-radius: 999;
+    -fx-font-size: 30px;
+    -fx-font-weight: 400;
+    -fx-text-fill: #0e6632;
+    -fx-padding: 0 0 4 0;
+    -fx-cursor: hand;
+}
+
+.sales-add-btn:hover {
+    -fx-background-color: #a3f5b2;
+    -fx-effect: dropshadow(gaussian, rgba(14, 102, 50, 0.18), 14, 0.2, 0, 5);
+}
+
+.product-page-dot {
+    -fx-min-width: 10;
+    -fx-min-height: 10;
+    -fx-max-width: 10;
+    -fx-max-height: 10;
+    -fx-background-color: #d0e3d4;
+    -fx-background-radius: 999;
+    -fx-cursor: hand;
+}
+
+.product-page-dot.active {
+    -fx-min-width: 28;
+    -fx-max-width: 28;
+    -fx-background-color: #16743a;
+}
+
+.sales-divider {
+    -fx-min-height: 1;
+    -fx-background-color: #dfddc8;
+}
+
+.patient-queue-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 1;
+    -fx-text-fill: #626255;
+}
+
+.patient-pill {
+    -fx-pref-width: 205;
+    -fx-min-height: 70;
+    -fx-padding: 8 14 8 10;
+    -fx-background-color: #ece9db;
+    -fx-background-radius: 999;
+    -fx-cursor: hand;
+}
+
+.patient-pill:hover {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.10), 14, 0.15, 0, 5);
+}
+
+.patient-next-btn {
+    -fx-padding: 8 13 8 13;
+    -fx-background-color: #e8e6d8;
+    -fx-background-radius: 999;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+    -fx-cursor: hand;
+}
+
+.patient-avatar {
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-max-width: 50;
+    -fx-max-height: 50;
+    -fx-background-radius: 999;
+}
+
+.patient-avatar.one { -fx-background-color: #f3ceb7; }
+.patient-avatar.two { -fx-background-color: #c5d8d5; }
+.patient-avatar.three { -fx-background-color: #f0c2a3; }
+
+.patient-avatar-text {
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.patient-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.patient-wait {
+    -fx-font-size: 12px;
+    -fx-text-fill: #656558;
+}
+
+.cart-panel {
+    -fx-pref-width: 460;
+    -fx-min-width: 460;
+    -fx-padding: 52 40 40 40;
+    -fx-background-color: #fbfaf2;
+    -fx-background-radius: 34;
+    -fx-border-color: rgba(255, 255, 255, 0.94);
+    -fx-border-width: 1;
+    -fx-border-radius: 34;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.10), 24, 0.2, 0, 8);
+}
+
+.cart-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 31px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.cart-delete {
+    -fx-font-size: 22px;
+    -fx-text-fill: #b0200d;
+    -fx-cursor: hand;
+}
+
+.cart-qty {
+    -fx-min-width: 60;
+    -fx-min-height: 60;
+    -fx-max-width: 60;
+    -fx-max-height: 60;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+}
+
+.cart-qty-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.cart-item-name {
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.cart-item-meta {
+    -fx-font-size: 14px;
+    -fx-text-fill: #656558;
+}
+
+.cart-line-price {
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.cart-item-delete {
+    -fx-font-size: 16px;
+    -fx-text-fill: #b0200d;
+    -fx-cursor: hand;
+}
+
+.cart-empty-text {
+    -fx-padding: 16;
+    -fx-background-color: #ece9db;
+    -fx-background-radius: 16;
+    -fx-font-size: 14px;
+    -fx-text-fill: #656558;
+}
+
+.cart-divider {
+    -fx-min-height: 1;
+    -fx-background-color: #dfddcf;
+}
+
+.cart-summary-label,
+.cart-summary-value {
+    -fx-font-size: 17px;
+    -fx-text-fill: #656558;
+}
+
+.cart-summary-value {
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.tax-rate-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(187, 186, 170, 0.20);
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+    -fx-alignment: center;
+}
+
+.cart-total-label {
+    -fx-font-size: 27px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.cart-total-value {
+    -fx-font-size: 25px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.payment-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 2;
+    -fx-text-fill: #626255;
+}
+
+.payment-method {
+    -fx-pref-width: 132;
+    -fx-min-height: 104;
+    -fx-background-color: #ece9db;
+    -fx-background-radius: 16;
+    -fx-border-color: transparent;
+    -fx-border-radius: 16;
+    -fx-cursor: hand;
+}
+
+.payment-method.active {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #0e6632;
+    -fx-border-width: 2;
+}
+
+.payment-method:hover {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.10), 14, 0.16, 0, 5);
+}
+
+.payment-icon {
+    -fx-font-size: 24px;
+    -fx-text-fill: #656558;
+}
+
+.payment-icon.active {
+    -fx-text-fill: #0e6632;
+}
+
+.payment-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #656558;
+}
+
+.payment-label.active {
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.complete-sale-button {
+    -fx-min-height: 84;
+    -fx-background-color: #16743a;
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(14, 102, 50, 0.26), 18, 0.2, 0, 8);
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.complete-sale-button:hover {
+    -fx-background-color: linear-gradient(to right, #21733d 0%, #8be8a0 100%);
+}

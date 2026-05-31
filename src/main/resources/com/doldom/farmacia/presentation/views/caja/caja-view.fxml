@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="900.0" prefWidth="1600.0" styleClass="cash-screen" stylesheets="@caja.css"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.doldom.farmacia.presentation.views.caja.CajaController">
+
+    <fx:include source="/com/doldom/farmacia/presentation/components/cashregister/sidebar.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="cash-scroll" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+            <AnchorPane minHeight="980.0" prefWidth="1260.0" styleClass="cash-content">
+
+                <VBox spacing="34.0" styleClass="cash-main-column" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="8.0">
+                    <HBox alignment="CENTER_LEFT" spacing="16.0" styleClass="cash-topbar-row">
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="search-shell,cash-search-shell">
+                            <Label styleClass="icon-mdl,top-icon" text="&#xE721;"/>
+                            <TextField promptText="Buscar transacciones o recetas..." styleClass="search-field"/>
+                        </HBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label styleClass="icon-mdl,top-icon-btn" text="&#xE7F4;"/>
+                        <Label styleClass="icon-mdl,top-icon-btn" text="&#xE713;"/>
+                        <Label styleClass="icon-mdl,top-icon-btn" text="&#xE897;"/>
+                    </HBox>
+
+                    <VBox spacing="8.0">
+                        <Label styleClass="cash-title" text="Gestion de caja"/>
+                        <Label maxWidth="620.0" styleClass="cash-subtitle" text="Monitorea flujos diarios, concilia balances y administra sesiones de terminal con precision." wrapText="true"/>
+                    </VBox>
+
+                    <HBox spacing="28.0">
+                        <VBox spacing="16.0" styleClass="metric-card,cash-metric">
+                            <HBox alignment="CENTER_LEFT">
+                                <StackPane styleClass="metric-icon,green">
+                                    <Label styleClass="icon-mdl,metric-icon-text" text="&#xE8C7;"/>
+                                </StackPane>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="metric-chip,green" text="+12%"/>
+                            </HBox>
+                            <VBox spacing="6.0">
+                                <Label styleClass="metric-label" text="TOTAL EFECTIVO"/>
+                                <Label fx:id="cashTotalValue" styleClass="metric-value" text="Q4,280.50"/>
+                            </VBox>
+                        </VBox>
+
+                        <VBox spacing="16.0" styleClass="metric-card,card-metric">
+                            <HBox alignment="CENTER_LEFT">
+                                <StackPane styleClass="metric-icon,orange">
+                                    <Label styleClass="icon-mdl,metric-icon-text,orange" text="&#xE8C7;"/>
+                                </StackPane>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="metric-chip,orange" text="+5%"/>
+                            </HBox>
+                            <VBox spacing="6.0">
+                                <Label styleClass="metric-label" text="VENTAS TARJETA"/>
+                                <Label fx:id="cardSalesValue" styleClass="metric-value" text="Q8,144.00"/>
+                            </VBox>
+                        </VBox>
+
+                        <VBox spacing="16.0" styleClass="metric-card,digital-metric">
+                            <HBox alignment="CENTER_LEFT">
+                                <StackPane styleClass="metric-icon,green">
+                                    <Label styleClass="icon-mdl,metric-icon-text" text="&#xE8EA;"/>
+                                </StackPane>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="metric-chip,green" text="+8%"/>
+                            </HBox>
+                            <VBox spacing="6.0">
+                                <Label styleClass="metric-label" text="DIGITAL / QR"/>
+                                <Label fx:id="digitalTotalValue" styleClass="metric-value" text="Q1,920.25"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+
+                    <VBox spacing="26.0" styleClass="history-card">
+                        <HBox alignment="CENTER_LEFT">
+                            <Label styleClass="history-title" text="Historial de sesion"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label styleClass="history-link" text="Ver auditoria completa  ->"/>
+                        </HBox>
+
+                        <VBox spacing="20.0">
+                            <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="history-row">
+                                <StackPane styleClass="history-icon,green">
+                                    <Label styleClass="icon-mdl,history-icon-text" text="&#xE785;"/>
+                                </StackPane>
+                                <VBox HBox.hgrow="ALWAYS">
+                                    <Label styleClass="history-name" text="Apertura de caja"/>
+                                    <Label styleClass="history-meta" text="24 Nov, 2023 - 08:00 AM"/>
+                                </VBox>
+                                <VBox alignment="CENTER_RIGHT">
+                                    <Label styleClass="history-amount,green" text="Q1,200.00"/>
+                                    <Label styleClass="history-user" text="POR DRA. ELENA"/>
+                                </VBox>
+                            </HBox>
+
+                            <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="history-row">
+                                <StackPane styleClass="history-icon,orange">
+                                    <Label styleClass="icon-mdl,history-icon-text,orange" text="&#xE72E;"/>
+                                </StackPane>
+                                <VBox HBox.hgrow="ALWAYS">
+                                    <Label styleClass="history-name" text="Cierre de turno reconciliado"/>
+                                    <Label styleClass="history-meta" text="23 Nov, 2023 - 09:15 PM"/>
+                                </VBox>
+                                <VBox alignment="CENTER_RIGHT">
+                                    <Label styleClass="history-amount,orange" text="Q14,520.30"/>
+                                    <Label styleClass="history-user" text="POR PH. MARK T."/>
+                                </VBox>
+                            </HBox>
+
+                            <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="history-row,muted">
+                                <StackPane styleClass="history-icon,muted">
+                                    <Label styleClass="icon-mdl,history-icon-text,muted" text="&#xE777;"/>
+                                </StackPane>
+                                <VBox HBox.hgrow="ALWAYS">
+                                    <Label styleClass="history-name,muted" text="Retiro de medio dia"/>
+                                    <Label styleClass="history-meta" text="23 Nov, 2023 - 02:00 PM"/>
+                                </VBox>
+                                <VBox alignment="CENTER_RIGHT">
+                                    <Label styleClass="history-amount,muted" text="-Q2,000.00"/>
+                                    <Label styleClass="history-user" text="TRANSFERENCIA SEGURA"/>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </VBox>
+
+                <VBox spacing="30.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="165.0">
+                    <HBox alignment="CENTER_LEFT" spacing="36.0" styleClass="session-chip">
+                        <Label styleClass="session-active" text="Sesion activa"/>
+                        <Label fx:id="registerIdValue" styleClass="session-id" text="ID: REG-00452-D"/>
+                    </HBox>
+
+                    <VBox spacing="22.0" styleClass="opening-card">
+                        <HBox alignment="CENTER_LEFT">
+                            <Label styleClass="opening-title" text="Balance inicial"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label styleClass="icon-mdl,opening-watermark" text="&#xE8C7;"/>
+                        </HBox>
+                        <VBox spacing="12.0">
+                            <Label styleClass="opening-label" text="FONDO INICIAL EN EFECTIVO"/>
+                            <HBox alignment="CENTER_LEFT" spacing="8.0" styleClass="opening-input-shell">
+                                <Label styleClass="opening-currency" text="Q"/>
+                                <TextField styleClass="opening-input" text="0.00"/>
+                            </HBox>
+                        </VBox>
+                        <Button maxWidth="1.7976931348623157E308" onAction="#onInitializeSession" styleClass="initialize-button" text="Inicializar sesion"/>
+                    </VBox>
+
+                    <VBox spacing="24.0" styleClass="close-card">
+                        <Label styleClass="close-title" text="Cerrar caja"/>
+                        <Label styleClass="close-expected" text="Sistema esperado: Q4,280.50"/>
+                        <VBox spacing="10.0">
+                            <Label styleClass="close-label" text="CONTEO FISICO"/>
+                            <TextField promptText="Ingrese conteo fisico" styleClass="close-input"/>
+                        </VBox>
+                        <VBox spacing="10.0">
+                            <Label styleClass="close-label" text="NOTAS DE DIFERENCIA"/>
+                            <TextArea prefRowCount="3" promptText="Explique faltantes o sobrantes..." styleClass="close-textarea" wrapText="true"/>
+                        </VBox>
+                        <Button maxWidth="1.7976931348623157E308" onAction="#onFinalizeRegister" styleClass="finalize-button" text="Finalizar y cerrar"/>
+                    </VBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="pro-tip-card">
+                        <Label styleClass="icon-mdl,pro-tip-icon" text="&#xEA80;"/>
+                        <VBox>
+                            <Label styleClass="pro-tip-title" text="Pro-Tip"/>
+                            <Label maxWidth="230.0" styleClass="pro-tip-text" text="Realiza un retiro seguro de medio dia si el efectivo supera Q5,000 para minimizar riesgo." wrapText="true"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+            </AnchorPane>
+        </content>
+    </ScrollPane>
+</AnchorPane>

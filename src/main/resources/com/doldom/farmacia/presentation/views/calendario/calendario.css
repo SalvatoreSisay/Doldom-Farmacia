@@ -1,0 +1,338 @@
+@import url("../home/home.css");
+
+.calendar-screen {
+    -fx-background-color: #feffd5;
+    -fx-font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.calendar-page-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.calendar-month-pill,
+.calendar-pending-pill {
+    -fx-background-color: #e8e6d8;
+    -fx-background-radius: 999;
+    -fx-padding: 7 14 7 14;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0e6632;
+}
+
+.calendar-search-shell {
+    -fx-pref-width: 330;
+}
+
+.calendar-profile {
+    -fx-min-width: 42;
+    -fx-min-height: 42;
+    -fx-max-width: 42;
+    -fx-max-height: 42;
+    -fx-background-color: #d6ecdd;
+    -fx-background-radius: 999;
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 999;
+    -fx-border-width: 3;
+}
+
+.calendar-profile-text {
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #21733d;
+}
+
+.calendar-card {
+    -fx-background-color: #f8f8f5;
+    -fx-background-radius: 30;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.08), 22, 0.18, 0, 8);
+}
+
+.calendar-arrow {
+    -fx-font-size: 19px;
+    -fx-text-fill: #1f2018;
+}
+
+.calendar-card-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.calendar-view-switch {
+    -fx-background-color: #eeecdd;
+    -fx-background-radius: 14;
+    -fx-padding: 5;
+}
+
+.calendar-view-option {
+    -fx-min-width: 82;
+    -fx-min-height: 40;
+    -fx-alignment: center;
+    -fx-background-radius: 11;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #56564d;
+}
+
+.calendar-view-option.active {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #0e6632;
+}
+
+.calendar-weekdays {
+    -fx-padding: 0 2 0 2;
+}
+
+.calendar-weekday {
+    -fx-alignment: center;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #55564b;
+}
+
+.calendar-day {
+    -fx-min-height: 94;
+    -fx-padding: 12;
+    -fx-background-color: #f3f1e5;
+    -fx-background-radius: 16;
+}
+
+.calendar-day.muted {
+    -fx-background-color: rgba(245, 244, 235, 0.52);
+}
+
+.calendar-day.today {
+    -fx-background-color: #f7f5ea;
+    -fx-border-color: #b8d3b9;
+    -fx-border-radius: 16;
+    -fx-border-width: 2;
+}
+
+.calendar-day.featured {
+    -fx-background-color: #e8f8ea;
+    -fx-border-color: #a7d7b0;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-border-style: dashed;
+}
+
+.calendar-day-number {
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #4b4c40;
+}
+
+.calendar-day-number.today {
+    -fx-text-fill: #0e6632;
+}
+
+.calendar-today-dot {
+    -fx-min-width: 8;
+    -fx-min-height: 8;
+    -fx-max-width: 8;
+    -fx-max-height: 8;
+    -fx-background-color: #21733d;
+    -fx-background-radius: 999;
+}
+
+.calendar-event {
+    -fx-padding: 7 9 7 9;
+    -fx-background-radius: 9;
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+    -fx-line-spacing: 2;
+}
+
+.calendar-event.green {
+    -fx-background-color: #cdebd1;
+    -fx-border-color: #76b886;
+    -fx-border-radius: 9;
+    -fx-text-fill: #155f31;
+}
+
+.calendar-event.orange {
+    -fx-background-color: #f6d8c8;
+    -fx-border-color: #c66b22;
+    -fx-border-radius: 9;
+    -fx-text-fill: #8b3200;
+}
+
+.calendar-event.red {
+    -fx-background-color: #f7d8ca;
+    -fx-border-color: #c54224;
+    -fx-border-radius: 9;
+    -fx-text-fill: #ad250f;
+}
+
+.calendar-event.neutral {
+    -fx-background-color: #dfddcf;
+    -fx-text-fill: #5f6055;
+}
+
+.calendar-feature-icon {
+    -fx-font-size: 30px;
+    -fx-text-fill: #0e6632;
+}
+
+.calendar-feature-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.calendar-feature-sub {
+    -fx-font-size: 11px;
+    -fx-text-fill: #4c8b62;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.calendar-right-rail {
+    -fx-pref-width: 370;
+    -fx-min-width: 370;
+    -fx-max-width: 370;
+}
+
+.calendar-side-card,
+.calendar-focus-card {
+    -fx-background-color: #f5f4ea;
+    -fx-background-radius: 28;
+    -fx-padding: 28;
+    -fx-border-color: #e5e0c9;
+    -fx-border-radius: 28;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.08), 18, 0.18, 0, 6);
+}
+
+.calendar-focus-card {
+    -fx-background-color: #e7f5cf;
+}
+
+.calendar-side-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.calendar-pending-pill {
+    -fx-font-size: 12px;
+    -fx-text-fill: #4f5045;
+}
+
+.calendar-task-row {
+    -fx-min-height: 72;
+    -fx-padding: 12 14 12 14;
+    -fx-background-color: #fffefa;
+    -fx-background-radius: 16;
+}
+
+.calendar-task-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.calendar-task-title.done {
+    -fx-text-fill: #8c8c82;
+    -fx-strikethrough: true;
+}
+
+.calendar-task-sub {
+    -fx-font-size: 11px;
+    -fx-text-fill: #74756a;
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: #b6d4be;
+    -fx-border-radius: 6;
+    -fx-border-width: 2;
+    -fx-pref-width: 22;
+    -fx-pref-height: 22;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #78a984;
+    -fx-border-color: #78a984;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.calendar-create-button {
+    -fx-min-height: 54;
+    -fx-background-color: transparent;
+    -fx-background-radius: 18;
+    -fx-border-color: #9bc5a3;
+    -fx-border-radius: 18;
+    -fx-border-style: dashed;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #0e6632;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+}
+
+.calendar-alert-card {
+    -fx-background-color: #fffefa;
+    -fx-background-radius: 16;
+    -fx-padding: 18;
+}
+
+.calendar-alert-icon,
+.calendar-warning-icon {
+    -fx-font-size: 20px;
+}
+
+.calendar-alert-icon {
+    -fx-text-fill: #a95400;
+}
+
+.calendar-warning-icon {
+    -fx-text-fill: #b03c23;
+}
+
+.calendar-alert-type,
+.calendar-warning-type {
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+}
+
+.calendar-alert-type {
+    -fx-text-fill: #8b3200;
+}
+
+.calendar-warning-type {
+    -fx-text-fill: #8a1e10;
+}
+
+.calendar-alert-text {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2018;
+    -fx-line-spacing: 4;
+}
+
+.calendar-floating-action {
+    -fx-min-width: 70;
+    -fx-min-height: 70;
+    -fx-max-width: 70;
+    -fx-max-height: 70;
+    -fx-background-color: #16743a;
+    -fx-background-radius: 999;
+    -fx-effect: dropshadow(gaussian, rgba(30, 34, 22, 0.18), 18, 0.2, 0, 6);
+}
+
+.calendar-floating-icon {
+    -fx-font-size: 30px;
+    -fx-text-fill: white;
+}

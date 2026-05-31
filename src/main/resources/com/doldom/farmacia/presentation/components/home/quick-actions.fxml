@@ -5,8 +5,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox spacing="10.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-    <VBox spacing="18.0" styleClass="quick-card" HBox.hgrow="ALWAYS">
+<HBox spacing="10.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.doldom.farmacia.presentation.components.home.QuickActionsController">
+    <VBox spacing="18.0" styleClass="quick-card" onMouseClicked="#onOpenVentas" HBox.hgrow="ALWAYS">
         <StackPane styleClass="quick-icon,green">
             <Label styleClass="icon-mdl,quick-icon-text" text="&#xE8C8;"/>
         </StackPane>
@@ -15,7 +16,7 @@
             <Label styleClass="quick-desc" text="Procesa cobros rapidos&#10;de mostrador"/>
         </VBox>
     </VBox>
-    <VBox spacing="18.0" styleClass="quick-card" HBox.hgrow="ALWAYS">
+    <VBox spacing="18.0" styleClass="quick-card" onMouseClicked="#onOpenCompras" HBox.hgrow="ALWAYS">
         <StackPane styleClass="quick-icon,orange">
             <Label styleClass="icon-mdl,quick-icon-text,orange-text" text="&#xE7BF;"/>
         </StackPane>
@@ -24,7 +25,7 @@
             <Label styleClass="quick-desc" text="Ingreso de stock de&#10;proveedores"/>
         </VBox>
     </VBox>
-    <VBox spacing="18.0" styleClass="quick-card" HBox.hgrow="ALWAYS">
+    <VBox spacing="18.0" styleClass="quick-card" onMouseClicked="#onOpenInventario" HBox.hgrow="ALWAYS">
         <StackPane styleClass="quick-icon,mint">
             <Label styleClass="icon-mdl,quick-icon-text,mint-text" text="&#xE8D1;"/>
         </StackPane>

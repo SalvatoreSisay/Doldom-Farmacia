@@ -2,15 +2,17 @@ package com.doldom.farmacia.presentation.views.inventario
 
 import com.doldom.farmacia.core.utils.BaseViewModel
 import com.doldom.farmacia.core.utils.UiState
+import com.doldom.farmacia.presentation.state.AppSession
 
 class InventarioViewModel : BaseViewModel<InventarioUiData>() {
     fun load() {
         _uiState.set(
             UiState.Success(
                 InventarioUiData(
-                    totalProductos = 1240,
-                    stockBajo = 18,
-                    proximosVencer = 12
+                    totalProductos = AppSession.inventoryItems().size,
+                    stockBajo = AppSession.lowStockProductsCount(),
+                    proximosVencer = AppSession.expiringSoonProductsCount(),
+                    saludInventario = AppSession.inventoryFreshnessPercent()
                 )
             )
         )
@@ -20,5 +22,6 @@ class InventarioViewModel : BaseViewModel<InventarioUiData>() {
 data class InventarioUiData(
     val totalProductos: Int,
     val stockBajo: Int,
-    val proximosVencer: Int
+    val proximosVencer: Int,
+    val saludInventario: Int
 )

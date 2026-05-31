@@ -1,0 +1,445 @@
+@import url("../home/home.css");
+
+.accounting-screen {
+    -fx-background-color: #feffd5;
+    -fx-font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.accounting-scroll,
+.accounting-scroll .viewport,
+.accounting-content {
+    -fx-background-color: #feffd5;
+}
+
+.accounting-scroll {
+    -fx-background: #feffd5;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.accounting-scroll .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+}
+
+.accounting-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #c7c4b5;
+    -fx-background-radius: 999;
+}
+
+.accounting-content {
+    -fx-pref-width: 1260;
+}
+
+.accounting-search-shell {
+    -fx-pref-width: 560;
+    -fx-max-width: 560;
+}
+
+.accounting-v-sep {
+    -fx-min-width: 1;
+    -fx-pref-width: 1;
+    -fx-max-width: 1;
+    -fx-min-height: 36;
+    -fx-background-color: #d4d2c3;
+}
+
+.accounting-branch-name {
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.accounting-branch-sub {
+    -fx-font-size: 10px;
+    -fx-text-fill: #656558;
+}
+
+.accounting-location-icon {
+    -fx-font-size: 22px;
+    -fx-text-fill: #16743a;
+}
+
+.accounting-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 40px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #16743a;
+}
+
+.accounting-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #656558;
+}
+
+.export-button,
+.pdf-button {
+    -fx-min-height: 50;
+    -fx-padding: 0 22 0 22;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.export-button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0ddd0;
+    -fx-border-width: 1;
+}
+
+.pdf-button {
+    -fx-background-color: #16743a;
+    -fx-effect: dropshadow(gaussian, rgba(14, 102, 50, 0.22), 12, 0.16, 0, 5);
+}
+
+.export-icon,
+.export-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #16743a;
+}
+
+.pdf-icon,
+.pdf-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ffffff;
+}
+
+.period-tabs {
+    -fx-pref-width: 480;
+    -fx-padding: 7;
+    -fx-background-color: #f0eddd;
+    -fx-background-radius: 14;
+}
+
+.period-tab {
+    -fx-min-width: 104;
+    -fx-min-height: 42;
+    -fx-alignment: center;
+    -fx-background-radius: 10;
+    -fx-font-size: 16px;
+    -fx-text-fill: #4f5045;
+}
+
+.period-tab.active {
+    -fx-background-color: #ffffff;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.summary-card {
+    -fx-pref-width: 300;
+    -fx-min-height: 168;
+    -fx-padding: 30 30 24 30;
+    -fx-background-radius: 20;
+}
+
+.summary-card.revenue {
+    -fx-background-color: #16743a;
+    -fx-effect: dropshadow(gaussian, rgba(14, 102, 50, 0.18), 18, 0.2, 0, 8);
+}
+
+.summary-card.expenses {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ebe8d8;
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+}
+
+.summary-card.profit {
+    -fx-background-color: #b9efc8;
+}
+
+.summary-label {
+    -fx-font-size: 14px;
+    -fx-letter-spacing: 1;
+    -fx-text-fill: #4f5045;
+}
+
+.summary-label.on-dark,
+.summary-caption.on-dark,
+.summary-value.on-dark {
+    -fx-text-fill: #ffffff;
+}
+
+.summary-label.profit,
+.summary-value.profit,
+.summary-caption.profit {
+    -fx-text-fill: #2b6042;
+}
+
+.summary-value {
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #282a22;
+}
+
+.summary-icon {
+    -fx-min-width: 62;
+    -fx-min-height: 62;
+    -fx-max-width: 62;
+    -fx-max-height: 62;
+    -fx-background-radius: 16;
+}
+
+.summary-icon.on-dark {
+    -fx-background-color: rgba(255, 255, 255, 0.18);
+}
+
+.summary-icon.orange {
+    -fx-background-color: #ffd7bf;
+}
+
+.summary-icon.profit {
+    -fx-background-color: rgba(22, 116, 58, 0.16);
+}
+
+.summary-icon-text {
+    -fx-font-size: 26px;
+}
+
+.summary-icon-text.on-dark {
+    -fx-text-fill: #ffffff;
+}
+
+.summary-icon-text.orange {
+    -fx-text-fill: #a95400;
+}
+
+.summary-icon-text.profit {
+    -fx-text-fill: #2b6042;
+}
+
+.summary-pill {
+    -fx-padding: 5 10 5 10;
+    -fx-background-radius: 999;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+}
+
+.summary-pill.positive {
+    -fx-background-color: rgba(185, 239, 200, 0.28);
+    -fx-text-fill: #b9efc8;
+}
+
+.summary-pill.negative {
+    -fx-background-color: #ffd7bf;
+    -fx-text-fill: #8c3900;
+}
+
+.summary-pill.margin {
+    -fx-background-color: rgba(22, 116, 58, 0.16);
+    -fx-text-fill: #2b6042;
+}
+
+.summary-caption {
+    -fx-font-size: 14px;
+    -fx-text-fill: #656558;
+}
+
+.ledger-card {
+    -fx-padding: 36 20 32 20;
+    -fx-background-color: #fbfaf2;
+    -fx-background-radius: 30;
+}
+
+.ledger-title,
+.analysis-title {
+    -fx-font-family: "Manrope", "Segoe UI", sans-serif;
+    -fx-font-size: 23px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.ledger-chip {
+    -fx-padding: 6 14 6 14;
+    -fx-background-color: #e1dece;
+    -fx-background-radius: 999;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #656558;
+}
+
+.ledger-tool {
+    -fx-font-size: 22px;
+    -fx-text-fill: #4f5045;
+}
+
+.ledger-head {
+    -fx-padding: 14 24 8 24;
+}
+
+.ledger-col {
+    -fx-font-size: 13px;
+    -fx-text-fill: #4f5045;
+}
+
+.ledger-head .ledger-col {
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 1;
+}
+
+.ledger-col.id { -fx-pref-width: 170; }
+.ledger-col.date { -fx-pref-width: 150; }
+.ledger-col.category { -fx-pref-width: 255; }
+.ledger-col.status { -fx-pref-width: 160; }
+.ledger-col.amount { -fx-pref-width: 170; }
+
+.ledger-row {
+    -fx-min-height: 86;
+    -fx-padding: 0 24 0 24;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+}
+
+.transaction-id {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.ledger-date {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1f2018;
+}
+
+.ledger-time {
+    -fx-font-size: 11px;
+    -fx-text-fill: #656558;
+}
+
+.ledger-category {
+    -fx-font-size: 15px;
+    -fx-text-fill: #656558;
+}
+
+.status-badge {
+    -fx-padding: 6 12 6 12;
+    -fx-background-radius: 999;
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+}
+
+.status-badge.done {
+    -fx-background-color: #a7dfb6;
+    -fx-text-fill: #0e6632;
+}
+
+.status-badge.pending {
+    -fx-background-color: #ffd7bf;
+    -fx-text-fill: #8c3900;
+}
+
+.amount-positive,
+.amount-negative {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+}
+
+.amount-positive { -fx-text-fill: #0e6632; }
+.amount-negative { -fx-text-fill: #ba220f; }
+
+.view-all-link {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+    -fx-padding: 16 0 0 0;
+}
+
+.analysis-card {
+    -fx-pref-width: 480;
+    -fx-padding: 34;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 28;
+}
+
+.analysis-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #656558;
+}
+
+.donut-shell {
+    -fx-min-width: 170;
+    -fx-min-height: 170;
+}
+
+.donut-outer {
+    -fx-fill: #16743a;
+}
+
+.donut-inner {
+    -fx-fill: #d7f7dd;
+}
+
+.donut-value {
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0e6632;
+}
+
+.legend-dot {
+    -fx-min-width: 12;
+    -fx-min-height: 12;
+    -fx-max-width: 12;
+    -fx-max-height: 12;
+    -fx-background-radius: 999;
+}
+
+.legend-dot.prescriptions { -fx-background-color: #16743a; }
+.legend-dot.otc { -fx-background-color: #b9efc8; }
+.legend-dot.others { -fx-background-color: #e5e0cc; }
+
+.legend-label,
+.legend-value {
+    -fx-font-size: 15px;
+}
+
+.legend-label {
+    -fx-text-fill: #1f2018;
+}
+
+.legend-value {
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2018;
+}
+
+.branch-name,
+.branch-value {
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+}
+
+.branch-name {
+    -fx-text-fill: #1f2018;
+}
+
+.branch-value {
+    -fx-text-fill: #0e6632;
+}
+
+.branch-track {
+    -fx-min-height: 7;
+    -fx-background-color: #f0eddd;
+    -fx-background-radius: 999;
+}
+
+.branch-bar {
+    -fx-min-height: 7;
+    -fx-background-color: #16743a;
+    -fx-background-radius: 999;
+}
+
+.branch-bar.one { -fx-pref-width: 340; }
+.branch-bar.two { -fx-pref-width: 225; }
+.branch-bar.three { -fx-pref-width: 100; }
+
+.accounting-footer-line {
+    -fx-min-height: 1;
+    -fx-background-color: #e0ddc8;
+}
+
+.footer-copy,
+.footer-link {
+    -fx-font-size: 12px;
+    -fx-text-fill: #656558;
+}

@@ -29,23 +29,23 @@
             <Label styleClass="icon-mdl,nav-icon" text="&#xE719;"/>
             <Label styleClass="nav-label" text="Inventario"/>
         </HBox>
-        <HBox spacing="16.0" styleClass="nav-item">
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenVentas">
             <Label styleClass="icon-mdl,nav-icon" text="&#xEAFD;"/>
             <Label styleClass="nav-label" text="Ventas"/>
         </HBox>
-        <HBox spacing="16.0" styleClass="nav-item">
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenCompras">
             <Label styleClass="icon-mdl,nav-icon" text="&#xE7BF;"/>
             <Label styleClass="nav-label" text="Compras"/>
         </HBox>
-        <HBox spacing="16.0" styleClass="nav-item">
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenCaja">
             <Label styleClass="icon-mdl,nav-icon" text="&#xE7F8;"/>
             <Label styleClass="nav-label" text="Caja"/>
         </HBox>
-        <HBox spacing="16.0" styleClass="nav-item">
-            <Label styleClass="icon-mdl,nav-icon" text="&#xE7F1;"/>
-            <Label styleClass="nav-label" text="Sucursales"/>
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenCalendario">
+            <Label styleClass="icon-mdl,nav-icon" text="&#xE787;"/>
+            <Label styleClass="nav-label" text="Calendario"/>
         </HBox>
-        <HBox spacing="16.0" styleClass="nav-item">
+        <HBox spacing="16.0" styleClass="nav-item" onMouseClicked="#onOpenContabilidad">
             <Label styleClass="icon-mdl,nav-icon" text="&#xE7EE;"/>
             <Label styleClass="nav-label" text="Contabilidad"/>
         </HBox>
@@ -56,7 +56,7 @@
     </VBox>
 
     <VBox spacing="14.0">
-        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="new-rx-button" text="  +   Nueva receta"/>
+        <Button maxWidth="1.7976931348623157E308" onAction="#onNewPrescription" styleClass="new-rx-button" text="  +   Nueva receta"/>
         <HBox alignment="CENTER_LEFT" spacing="14.0">
             <StackPane styleClass="avatar">
                 <Label styleClass="avatar-text" text="ET"/>
